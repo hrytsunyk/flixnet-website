@@ -1,0 +1,10 @@
+.HeaderFather,
+.NavBar {
+    height: 80px;
+    background: #12121f;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
