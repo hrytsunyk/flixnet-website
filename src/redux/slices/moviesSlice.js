@@ -10,6 +10,7 @@ const getAll = () => createAsyncThunk(
     async (arg, thunkAPI) => {
         try {
             const {data} = await moviesService.getAll()
+            console.log(data)
             return data
         } catch (e) {
             thunkAPI.rejectWithValue(e.response.data)
