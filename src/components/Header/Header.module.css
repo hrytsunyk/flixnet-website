@@ -1,34 +1,17 @@
 .HeaderFather{
-    height: 80px;
+    height: 50px;
     background: #12121f;
     color: aliceblue;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    padding: 0 25px 0 25px;
     align-items: center;
 }
 
-.NavBarFather{
-    margin: 10px;
+.LogoNav{
+    width: 300px;
     display: flex;
-}
-
-.NavBarMovies,
-.NavBar_Home,
-.NavBarTVshows,
-.NavBarAnim,
-.NavBarPlans {
-    margin: 10px;
-}
-
-.HeaderIconsFather{
-}
-
-a {
-    color: white;
-    text-decoration: none;
-}
-
-a[class='active']{
-    background: #ffbe00;
+    justify-content: space-between;
+    align-items: center;
 
 }

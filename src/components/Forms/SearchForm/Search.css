@@ -1,0 +1,43 @@
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    width: 200px;
+    height: 20px;
+    border-style: none;
+    border-radius: 15px;
+    position: relative;
+    top: 0;
+    left: 20px;
+    z-index: 0;
+    padding-left: 5px;
+
+}
+
+button {
+    border-radius: 50%;
+    z-index: +1;
+    width: 20px;
+    height: 20px;
+    padding-left: -5px;
+    background: white;
+    border-style: none;
+
+}
+
+button:hover {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    padding-left: -5px;
+    background: #ffbe00;
+    cursor: pointer;
+
+}
+
+input:focus {
+    outline: #ffbe00 1px solid;
+}
