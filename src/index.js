@@ -4,8 +4,8 @@ import '@csstools/normalize.css';
 import {App} from './App';
 import './index.css';
 import {BrowserRouter} from "react-router-dom";
-import {setupStore} from "./redux/slices/store";
 import {Provider} from "react-redux";
+import {setupStore} from "./redux/store";
 
 const store = setupStore();
 

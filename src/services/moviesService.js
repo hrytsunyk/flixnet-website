@@ -1,5 +1,5 @@
 import {axiosService} from "./axiosService";
-import {urls} from "../config/urls";
+import {urls} from "../configs/urls";
 
 const moviesService = {
     getAll: ()=> axiosService.get(urls.movies.moviesList)
