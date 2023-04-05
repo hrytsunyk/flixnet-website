@@ -6,5 +6,5 @@ const moviesService = {
 };
 
 export {
-    axiosService
+    moviesService
 }
