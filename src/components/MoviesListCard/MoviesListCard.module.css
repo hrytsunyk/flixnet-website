@@ -10,13 +10,14 @@
 
 
 .ListCardImg {
-    padding: 10px;
-    transition: transform .2s; /* Animation */
+    /*ransition: transform .2s; !* Animation *!*/
     width: 300px;
     height: 400px;
     margin: 0 auto;
     cursor: pointer;
-    
+    transition: 300ms;
+
+
 }
 
 .ListCardFather:hover{
@@ -25,6 +26,8 @@
 }
 
 .ListCardImg:hover {
-    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    transform: scale(1.1);
+    transition: 300ms;
 }
+
 
