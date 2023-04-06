@@ -1,9 +1,22 @@
 import React from 'react';
+import {urls} from "../../configs/urls";
 
-const MoviesListCard = () => {
+import css from './MoviesListCard.module.css';
+
+const MoviesListCard = ({movie}) => {
+
+    const {
+        id, backdrop_path, original_language, original_title,
+        overview, poster_path, release_date, vote_average, vote_count
+    } = movie;
+
     return (
-        <div>
-
+        <div className={css.ListCardFather}>
+            <img
+                className={css.ListCardImg}
+                src={`${urls.base.getImg}${poster_path}`}
+                alt={original_title}
+            />
         </div>
     );
 };

@@ -25,7 +25,9 @@ import {urls} from "../../configs/urls";
 import {Avatar, Stack} from "@mui/material";
 
 import css  from './AvatarMenuFather.css'
+import {useNavigate} from "react-router-dom";
 const AvatarImage = () => {
+    const navigate = useNavigate();
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
@@ -33,12 +35,13 @@ const AvatarImage = () => {
     };
     const handleClose = () => {
         setAnchorEl(null);
+        navigate('/movies')
     };
 
     return (
         <div>
             <Stack direction="row" spacing={2}>
-                <Avatar  onClick={handleClick}  alt="Remy Sharp" src={`${urls.base.avatarImg}`}/>
+                <Avatar  onClick={handleClick}  alt="Remy Sharp" src={`${urls.base.getAvatar}`}/>
             </Stack>
 
             <Menu

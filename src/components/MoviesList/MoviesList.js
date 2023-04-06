@@ -3,6 +3,9 @@ import {useDispatch, useSelector} from "react-redux";
 import {moviesActions} from "../../redux/slices/moviesSlice";
 import {MoviesListCard} from "../MoviesListCard/MoviesListCard";
 
+import css from './MoviesList.module.css';
+import {MyPagination, Pagination} from "../Pagination/Pagination";
+
 const MoviesList = () => {
     const dispatch = useDispatch();
 
@@ -14,7 +17,8 @@ const MoviesList = () => {
 
     return (
         <div>
-            {movies.map(movie => <MoviesListCard key={movie.id} movie={movie}/>)}
+            <div className={css.MoviesList}>{movies.map(movie => <MoviesListCard key={movie.id} movie={movie}/>)}</div>
+            <div className={css.Pagination}><MyPagination/></div>
         </div>
     );
 };
