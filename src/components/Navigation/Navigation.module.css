@@ -19,9 +19,10 @@ a {
 
 a[class='active']{
     color: #ffffff;
-    text-decoration-line: underline;
-    text-underline-offset: 15px;
-    text-decoration-color: #ffbe00;
+    /*text-decoration-line: underline;*/
+    /*text-underline-offset: 10px;*/
+    border-bottom: #ffbe00 solid 5px;
+    padding-bottom: 10px;    /*text-decoration-color: #ffbe00;*/
 }
 
 .SearchIconFather{

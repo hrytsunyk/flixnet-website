@@ -4,19 +4,37 @@ import PaginationItem from '@mui/material/PaginationItem';
 import Stack from '@mui/material/Stack';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
+import {Link, useSearchParams} from "react-router-dom";
+import {useEffect, useState} from "react";
+import {set} from "react-hook-form";
+import {moviesActions} from "../../redux/slices/moviesSlice";
 
-const MyPagination =()=> {
-    const {page} = useSelector(state => state.movies);
-    console.log(page);
+const MyPagination = () => {
+    const dispatch1 = useDispatch();
+
+    const [query, setQuery] = useSearchParams({page: '1'});
+
+    const queryPageNumber = query.get('page');
+
+    useEffect(() => {
+        dispatch1(moviesActions.getAll({page: queryPageNumber}))
+        window.scroll(0,0)
+
+    }, [dispatch1, query]);
+
+
+    console.log()
 
     return (
         <Pagination
-            count={10}
-            page={page}
+            count={500}
+            page={+queryPageNumber}
             renderItem={(item) => (
                 <PaginationItem
-                    slots={{ previous: ArrowBackIcon, next: ArrowForwardIcon }}
+                    component={Link}
+                    to={`/movies?page=${item.page}`}
+                    slots={{previous: ArrowBackIcon, next: ArrowForwardIcon}}
                     {...item}
                 />
             )}
