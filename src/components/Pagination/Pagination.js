@@ -1,13 +1,11 @@
 import * as React from 'react';
 import Pagination from '@mui/material/Pagination';
 import PaginationItem from '@mui/material/PaginationItem';
-import Stack from '@mui/material/Stack';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import {useDispatch, useSelector} from "react-redux";
+import {useDispatch} from "react-redux";
 import {Link, useSearchParams} from "react-router-dom";
-import {useEffect, useState} from "react";
-import {set} from "react-hook-form";
+import {useEffect} from "react";
 import {moviesActions} from "../../redux/slices/moviesSlice";
 
 const MyPagination = () => {

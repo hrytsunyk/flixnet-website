@@ -1,4 +1,4 @@
-import axios, {interceptors} from "axios";
+import axios from "axios";
 import {urls} from "../configs/urls";
 
 // const accessTokenKey = urls.base.access_token;
