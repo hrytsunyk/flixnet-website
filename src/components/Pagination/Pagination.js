@@ -30,7 +30,7 @@ const MyPagination = () => {
         <Pagination
             count={500}
             page={+queryPageNumber}
-            renderItem={(item) => (
+            renderItem={ (item) => (
                 <PaginationItem
                     component={Link}
                     to={`/movies?page=${item.page}`}

@@ -3,12 +3,13 @@ import {moviesService} from "../../services/moviesService";
 
 const initialState = {
     movies: [],
-    page:null,
-    loading:null,
-    error:null
+    movieById: [],
+    page: null,
+    loading: null,
+    error: null
 };
 
-const getAll =  createAsyncThunk(
+const getAll = createAsyncThunk(
     'moviesSlice/getAll',
     async ({page}, thunkAPI) => {
         try {
@@ -21,23 +22,45 @@ const getAll =  createAsyncThunk(
     }
 );
 
+const getById = createAsyncThunk(
+    'moviesSlice/getById',
+    async ({movieId}, thunkAPI) => {
+        try {
+            const {data} = await moviesService.getById(movieId);
+            return data
+
+        } catch (e) {
+            thunkAPI.rejectWithValue(e.response.data)
+        }
+    }
+)
+
 const moviesSlice = createSlice({
     name: 'moviesSlice',
     initialState,
     reducers: {},
     extraReducers: builder => {
         builder
-            .addCase(getAll.fulfilled,(state, action)=>{
-               const {results, page}= action.payload;
+            .addCase(getAll.fulfilled, (state, action) => {
+                const {results, page} = action.payload;
                 state.loading = false;
                 state.page = page;
                 state.movies = results;
             })
-            .addCase(getAll.pending,(state, action)=>{
-                state.loading=true;
+            .addCase(getAll.pending, (state, action) => {
+                state.loading = true;
             })
-            .addCase(getAll.rejected,(state, action)=>{
-                state.error=action.payload
+            .addCase(getAll.rejected, (state, action) => {
+                state.error = action.payload;
+            })
+            .addCase(getById.fulfilled, (state, action) => {
+                state.loading = false;
+                state.movieById = action.payload;
+            })
+            .addCase(getById.pending, (state, action) => {
+                state.loading = true;
+                state.movieById = action.payload;
+
             })
     }
 })

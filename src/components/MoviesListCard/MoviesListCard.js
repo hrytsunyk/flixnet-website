@@ -12,11 +12,17 @@ const MoviesListCard = ({movie}) => {
 
     return (
         <div className={css.ListCardFather}>
-            <img
-                className={css.ListCardImg}
-                src={`${urls.base.getImg}${poster_path}`}
-                alt={original_title}
-            />
+            <div>
+                <div>
+                    {original_title}
+                </div>
+                <img
+                    className={css.ListCardImg}
+                    src={`${urls.base.getImg}${poster_path}`}
+                    alt={original_title}
+                />
+            </div>
+
         </div>
     );
 };
