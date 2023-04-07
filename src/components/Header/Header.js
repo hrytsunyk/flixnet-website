@@ -5,7 +5,6 @@ import {Navigation} from "../Navigation/Navigation";
 import {Logo} from "../Logo/Logo";
 import {SearchForm} from "../Forms/SearchForm/SearchForm";
 import {AvatarImage} from "../Avatar/Avatar";
-import MenuList from "@mui/material/MenuList";
 
 const Header = () => {
     return (
