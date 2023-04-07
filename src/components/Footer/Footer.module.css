@@ -2,3 +2,18 @@
     height: 300px;
     background: #19192a;
 }
+
+.FooterLogo h2 {
+    width: 100%;
+    height: 50px;
+    color: white;
+    font-size: 50px;
+    margin: 0 0 0 0;
+}
+
+.TopBlock{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+}

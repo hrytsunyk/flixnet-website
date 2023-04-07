@@ -1,6 +1,12 @@
+.SocialFather{
+    width: 300px;
+    height: 50px;
+}
+
 .SocialUl {
     display: flex;
-    position: absolute;
+    width: 300px;
+    margin: 10px 0 ;
 }
 
 .SocialUl .SocialLi {
@@ -8,11 +14,11 @@
 }
 
 .SocialUl .SocialLi {
-    width: 80px;
-    height: 80px;
+    width: 40px;
+    height: 40px;
     background-color: #fff;
     text-align: center;
-    line-height: 80px;
+    line-height: 40px;
     font-size: 35px;
     margin: 0 10px;
     display: block;
