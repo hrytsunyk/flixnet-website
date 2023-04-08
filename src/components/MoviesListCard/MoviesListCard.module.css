@@ -1,36 +1,62 @@
 .ListCardFather{
+    width: 300px;
+    height: 400px;
     margin: 50px 20px 50px 20px
 }
 
-.ListCardImg{
-    width: 300px;
-    height: 400px;
+
+.ListCardFather:hover{
+    /*-webkit-filter: blur(2px);*/
+    /*filter: blur(2px);*/
 }
 
 
 
-.ListCardImg {
-    /*ransition: transform .2s; !* Animation *!*/
+.ImgCard {
     width: 285px;
     height: 400px;
     margin: 0 auto;
     cursor: pointer;
-    transition: 300ms;
-   /*border-top-right-radius: 50px;*/
-   border-top-left-radius: 60px;
-   border-bottom-right-radius: 60px;
+    transition: 500ms;
 }
 
-.ListCardFather:hover{
-    backdrop-filter: blur(10px);
-
-
+.Title {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 5px 0 10px;
+    box-sizing: border-box;
+    position: relative;
+    top: 60px;
+    color: white;
+    background: rgb(0, 0, 0, 0.5);
 }
 
-.ListCardImg:hover {
+.TitleCard{
+    width: 285px;
+    height: 400px;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: 500ms;
+}
+
+.TitleCard:hover{
     transform: scale(1.1);
-    transition: 300ms;
+    transition: 500ms;
+}
+
+.ImgCard .TitleCard:hover {
+    transform: scale(1.1);
+    transition: 500ms;
 
 }
 
-
+.RatingYear{
+    width: 285px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+}

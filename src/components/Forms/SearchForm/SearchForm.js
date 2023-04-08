@@ -7,7 +7,7 @@ import css from './Search.css';
 const SearchForm = () => {
     return (
             <form>
-                <input/>
+                <input placeholder={'Search'}/>
                 <button><SearchIcon/></button>
 
             </form>

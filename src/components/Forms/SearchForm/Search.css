@@ -5,39 +5,40 @@ form {
 }
 
 input {
-    width: 50px;
-    height: 20px;
+    width: 70px;
+    height: 22px;
     border-style: none;
     border-radius: 15px;
     position: relative;
     top: 0;
-    left: 20px;
+    left: 23px;
     z-index: 0;
-    padding-left: 5px;
-    transition: 1000ms;
-
-
+    padding-left: 10px;
+    transition: 500ms;
+    background: transparent;
+    color: white;
 }
 
 button {
     border-radius: 50%;
     z-index: +1;
-    width: 20px;
-    height: 20px;
-    padding-left: -5px;
-    background: white;
+    width: 25px;
+    height: 25px;
+    /*padding-left: -5px;*/
+    background: #ffffff;
     border-style: none;
+    transition: 500ms;
 
 }
 
 button:hover {
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
     padding-left: -5px;
     background: #ffbe00;
     cursor: pointer;
-
+    transition: 500ms;
 }
 /*input:hover{*/
 /*    width: 200px;*/
@@ -46,6 +47,6 @@ button:hover {
 input:focus {
     outline: #ffbe00 1px solid;
     width: 150px;
-    transition: 1000ms;
+    transition: 500ms;
 }
 
