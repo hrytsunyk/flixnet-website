@@ -24,7 +24,7 @@ const SocialMediasIcons = () => {
                     </li>
                 </Link>
 
-                <Link className={'SocialLink'} to={'https://linkedin.com'} target={"_blank"}>
+                <Link className={'SocialLink'} to={'https://www.linkedin.com/in/serhii-hrytsunyk-898899266/'} target={"_blank"}>
                     <li className={'SocialLi'} id="li3">
                         <FontAwesomeIcon className={'icon'} id={'Li2'} icon={faLinkedinIn} size={'2xs'}/>
                     </li>

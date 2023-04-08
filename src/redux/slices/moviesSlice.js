@@ -49,9 +49,11 @@ const moviesSlice = createSlice({
             })
             .addCase(getAll.pending, (state, action) => {
                 state.loading = true;
+
             })
             .addCase(getAll.rejected, (state, action) => {
                 state.error = action.payload;
+
             })
             .addCase(getById.fulfilled, (state, action) => {
                 state.loading = false;

@@ -15,14 +15,13 @@ const MyPagination = () => {
 
     const queryPageNumber = query.get('page');
 
-    useEffect(() => {
+    useEffect((e) => {
         dispatch1(moviesActions.getAll({page: queryPageNumber}))
         window.scroll(0,0)
 
     }, [dispatch1, query]);
 
 
-    console.log()
 
     return (
         <Pagination

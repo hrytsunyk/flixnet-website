@@ -18,6 +18,7 @@ const MoviesList = () => {
 
     return (
         <div>
+            {loading && <div className={css.Spinner}><SpinnerIcon/></div>}
             {
                 movies &&
                 <div
@@ -25,7 +26,6 @@ const MoviesList = () => {
                 </div>
             }
             {<div className={css.Pagination}><MyPagination/></div>}
-            {loading && <div className={css.Spinner}><SpinnerIcon/></div>}
         </div>
     );
 };

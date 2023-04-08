@@ -15,6 +15,9 @@ const urls = {
     movies: {
         moviesList: `${discover}/${movies}`,
         movieId: (movieId) => `${discover}/${movies}/${movieId}`
+    },
+    search:{
+        searchList: (name) => `${movies}/${search}/${name}`
     }
 
 }

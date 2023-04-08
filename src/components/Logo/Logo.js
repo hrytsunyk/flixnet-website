@@ -7,7 +7,7 @@ const Logo = () => {
     const navigate = useNavigate();
     return (
         <div className={css.Logo}>
-            <h2 onClick={()=> navigate('/home')}>FLIXNET</h2>
+            <h2 onClick={()=> navigate('/home')}></h2>
         </div>
     );
 };

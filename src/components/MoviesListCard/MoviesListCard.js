@@ -2,7 +2,7 @@ import React from 'react';
 import {urls} from "../../configs/urls";
 
 import css from './MoviesListCard.module.css';
-import {RatingStars} from "../Rating/Rating";
+import {RatingStars} from "../Rating/RatingStars";
 
 const MoviesListCard = ({movie}) => {
 
@@ -18,7 +18,7 @@ const MoviesListCard = ({movie}) => {
 
                 <div className={css.Title}>
                     <h4>{original_title}</h4>
-                    | <h5>{sliceDate}</h5>
+                     <h5>{sliceDate}</h5>
 
                 </div>
                 <img
@@ -28,7 +28,7 @@ const MoviesListCard = ({movie}) => {
                 />
                 <div className={css.RatingYear}>
                     <RatingStars rating={vote_average}/>
-                    ({vote_count})
+                   Vote count: ({vote_count})
                 </div>
             </div>
 

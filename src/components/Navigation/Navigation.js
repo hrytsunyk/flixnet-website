@@ -21,6 +21,9 @@ const Navigation = () => {
             <NavLink to={'plans'}>
                 <div className={css.NavBarPlans}>Plans</div>
             </NavLink>
+            <NavLink to={'plans'}>
+                <div className={css.NavBarPlans}>Plans</div>
+            </NavLink>
         </div>
     );
 };

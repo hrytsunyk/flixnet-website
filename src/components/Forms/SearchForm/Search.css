@@ -27,18 +27,19 @@ button {
     /*padding-left: -5px;*/
     background: #ffffff;
     border-style: none;
-    transition: 500ms;
+    /*transition: 500ms;*/
 
 }
 
 button:hover {
     width: 25px;
     height: 25px;
+    border: white 1px solid;
     border-radius: 50%;
     padding-left: -5px;
     background: #ffbe00;
     cursor: pointer;
-    transition: 500ms;
+    /*transition: 500ms;*/
 }
 /*input:hover{*/
 /*    width: 200px;*/
