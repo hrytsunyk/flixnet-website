@@ -6,6 +6,7 @@ import {MoviesListCard} from "../MoviesListCard/MoviesListCard";
 import css from './MoviesList.module.css';
 import {MyPagination, Pagination} from "../Pagination/Pagination";
 import {SpinnerIcon} from "../Icons/SpinnerIcon";
+import Poster from "../Poster/Poster";
 
 const MoviesList = () => {
     const dispatch = useDispatch();
@@ -16,13 +17,30 @@ const MoviesList = () => {
         dispatch(moviesActions.getAll())
     }, [dispatch])
 
+
     return (
         <div>
             {loading && <div className={css.Spinner}><SpinnerIcon/></div>}
             {
                 movies &&
-                <div
-                    className={css.MoviesList}>{movies.map(movie => <MoviesListCard key={movie.id} movie={movie}/>)}
+                <div className={css.MoviesList}>
+                    {
+                        movies.map(
+                            movie =>
+                                <Poster
+                                    key={movie.id}
+                                    id={movie.id}
+                                    backdrop_path={movie.backdrop_path}
+                                    original_language={movie.original_language}
+                                    original_title={movie.original_title}
+                                    overview={movie.overview}
+                                    poster_path={movie.poster_path}
+                                    release_date={movie.release_date}
+                                    vote_average={movie.vote_average}
+                                    vote_count={movie.vote_count}
+                                />
+                        )
+                    }
                 </div>
             }
             {<div className={css.Pagination}><MyPagination/></div>}

@@ -6,6 +6,7 @@ import {MainLayout} from "./layouts/MainLayout";
 import {MoviesPage} from "./pages/MoviesPage/MoviesPage";
 import {TvShowsPage} from "./pages/TvShowsPage/TvShowsPage";
 import {useSelector} from "react-redux";
+import {SearchPage} from "./pages/SearchPage/SearchPage";
 
 const App = () => {
     const {page} = useSelector(state => state.movies);
@@ -16,6 +17,7 @@ const App = () => {
                     <Route path={"home"} element={<HomePage/>}/>
                     <Route path={"movies"} element={<MoviesPage/>}/>
                     <Route path={"tv_shows"} element={<TvShowsPage/>}/>
+                    <Route path={"search/:movies"} element={<SearchPage/>}/>
                 </Route>
             </Routes>
     );
