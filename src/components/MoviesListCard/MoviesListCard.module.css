@@ -1,76 +1,76 @@
-.ListCardFather{
-    width: 300px;
-    height: 400px;
-    margin: 50px 20px 50px 20px
+/*.ListCardFather{*/
+/*    width: 300px;*/
+/*    height: 400px;*/
+/*    margin: 50px 20px 50px 20px*/
 
-}
-
-
-.ListCardFather:hover{
-    /*-webkit-filter: blur(2px);*/
-    /*filter: blur(2px);*/
-}
+/*}*/
 
 
+/*.ListCardFather:hover{*/
+/*    !*-webkit-filter: blur(2px);*!*/
+/*    !*filter: blur(2px);*!*/
+/*}*/
 
-.ImgCard {
-    width: 285px;
-    height: 400px;
-    margin: 0 auto;
-    cursor: pointer;
-    transition: 500ms;
 
-}
 
-.Title {
-    width: 100%;
-    height: 60px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
-    padding: 0 5px 0 10px;
-    box-sizing: border-box;
-    position: relative;
-    top: 60px;
-    color: white;
-    background: rgb(0, 0, 0, 0.5);
+/*.ImgCard {*/
+/*    width: 285px;*/
+/*    height: 400px;*/
+/*    margin: 0 auto;*/
+/*    cursor: pointer;*/
+/*    transition: 500ms;*/
 
-}
+/*}*/
 
-.Title h5 {
-    margin: 0;
-    color: #c5c5c5;
-}
+/*.Title {*/
+/*    width: 100%;*/
+/*    height: 60px;*/
+/*    display: flex;*/
+/*    justify-content: flex-start;*/
+/*    align-items: flex-start;*/
+/*    flex-direction: column;*/
+/*    padding: 0 5px 0 10px;*/
+/*    box-sizing: border-box;*/
+/*    position: relative;*/
+/*    top: 60px;*/
+/*    color: white;*/
+/*    background: rgb(0, 0, 0, 0.5);*/
 
-.Title h4{
-    margin: 5px 0 5px 0;
+/*}*/
 
-}
+/*.Title h5 {*/
+/*    margin: 0;*/
+/*    color: #c5c5c5;*/
+/*}*/
 
-.TitleCard{
-    width: 285px;
-    height: 400px;
-    margin: 0 auto;
-    cursor: pointer;
-    transition: 500ms;
-}
+/*.Title h4{*/
+/*    margin: 5px 0 5px 0;*/
 
-.TitleCard:hover{
-    transform: scale(1.1);
-    transition: 500ms;
-}
+/*}*/
 
-.ImgCard .TitleCard:hover {
-    transform: scale(1.1);
-    transition: 500ms;
+/*.TitleCard{*/
+/*    width: 285px;*/
+/*    height: 400px;*/
+/*    margin: 0 auto;*/
+/*    cursor: pointer;*/
+/*    transition: 500ms;*/
+/*}*/
 
-}
+/*.TitleCard:hover{*/
+/*    transform: scale(1.1);*/
+/*    transition: 500ms;*/
+/*}*/
 
-.RatingYear{
-    width: 285px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0;
-}
+/*.ImgCard .TitleCard:hover {*/
+/*    transform: scale(1.1);*/
+/*    transition: 500ms;*/
+
+/*}*/
+
+/*.RatingYear{*/
+/*    width: 285px;*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    align-items: center;*/
+/*    margin: 0;*/
+/*}*/

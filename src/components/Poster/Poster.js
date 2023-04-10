@@ -1,7 +1,7 @@
 import React from 'react';
-import css from "../MoviesListCard/MoviesListCard.module.css";
 import {urls} from "../../configs/urls";
 import {RatingStars} from "../Rating/RatingStars";
+import css from './Poster.module.css';
 
 const Poster = ({id,original_title,vote_average,vote_count,poster_path,release_date}) => {
 
