@@ -23,13 +23,13 @@ const SearchForm = () => {
 
 
     useEffect(()=>{
-        dispatch(searchActions.getSearch({ name:queryName, page:queryPageNumber}))
-    },[dispatch,query])
+        dispatch(searchActions.getSearch({page:queryPageNumber,name:queryName}))
+    },[dispatch,query,queryPageNumber])
 
     const findMovie =  async (dataInput) => {
         const {name} = dataInput;
         if (name !== '') {
-            // setQuery(name)
+            setQuery(name)
             navigate(`search/movie?name=${name}`)
             reset()
         }

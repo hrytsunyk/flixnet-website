@@ -6,7 +6,7 @@ const moviesService = {
     getAll: (page = '1') => axiosService.get(urls.movies.moviesList, {params: page}),
     getById:(movieId)=> axiosService.get(urls.movies.movieId(movieId)),
 
-    getSearching:(name,page='1') => axiosService.get(urls.search.searchList, {params:{query:name, page}})
+    getSearching:(page='1',name) => axiosService.get(urls.search.searchList, {params:{page,query:name}})
 };
 
 export {

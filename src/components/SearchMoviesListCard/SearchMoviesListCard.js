@@ -17,6 +17,8 @@ const SearchMoviesListCard = ({id, original_title, vote_average, vote_count, pos
                 vote_average={vote_average}
             />
 
+
+
         </div>
     );
 }

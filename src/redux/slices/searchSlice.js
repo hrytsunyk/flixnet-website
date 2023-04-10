@@ -11,9 +11,9 @@ const initialState={
 
 const getSearch = createAsyncThunk(
     'searchSlice/getSearch',
-    async ({name, page}, thunkAPI)=>{
+    async ({page, name}, thunkAPI)=>{
         try {
-            const {data} = await moviesService.getSearching(name,page);
+            const {data} = await moviesService.getSearching(page,name);
             return data
         }catch (e) {
             thunkAPI.rejectWithValue(e.response.data)
@@ -34,8 +34,12 @@ const searchSlice= createSlice({
                 state.searchedMovies = results;
                 state.page = page;
                 state.totalPages = total_pages;
+                state.loading = false
 
 
+            })
+            .addCase(getSearch.pending, (state, action)=>{
+                state.loading=true
             })
     }
 })
