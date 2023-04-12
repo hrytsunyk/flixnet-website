@@ -14,7 +14,7 @@ import {moviesActions} from "../../redux/slices/moviesSlice";
 
 const SearchMoviesList = () => {
     const dispatch = useDispatch();
-    const {searchedMovies, loading} = useSelector(state => state.search);
+    const {searchedMovies, loading, totalPages} = useSelector(state => state.search);
 
 
     const [query, setQuery] = useSearchParams({page: '1'});
@@ -52,7 +52,7 @@ const SearchMoviesList = () => {
             }
 
             <Pagination
-                count={500}
+                count={totalPages}
                 page={+queryPageNumber}
                 renderItem={ (item) => (
                     <PaginationItem
