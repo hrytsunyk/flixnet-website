@@ -14,7 +14,7 @@ import {moviesActions} from "../../redux/slices/moviesSlice";
 
 const SearchMoviesList = () => {
     const dispatch = useDispatch();
-    const {searchedMovies, loading, totalPages} = useSelector(state => state.search);
+    const {searchedMovies, loading, totalPages, errors} = useSelector(state => state.search);
 
 
     const [query, setQuery] = useSearchParams({page: '1'});
@@ -32,8 +32,9 @@ const SearchMoviesList = () => {
     return (
         <div className={css.SearchMoviesList}>
             {loading && <div className={css.Spinner}><SpinnerIcon/></div>}
+            {errors && <div className={css.Spinner}>Erorrrrrrr</div>}
 
-            {
+            {searchedMovies &&
                 searchedMovies.map(
                     searchedMovie =>
                         <SearchMoviesListCard
@@ -52,7 +53,7 @@ const SearchMoviesList = () => {
             }
 
             <Pagination
-                count={totalPages}
+                count={+totalPages}
                 page={+queryPageNumber}
                 renderItem={ (item) => (
                     <PaginationItem

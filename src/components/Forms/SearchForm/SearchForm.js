@@ -28,7 +28,7 @@ const SearchForm = () => {
 
     const findMovie =  async (dataInput) => {
         const {name} = dataInput;
-        if (name !== '') {
+        if (name !== '' ) {
             setQuery(name)
             navigate(`search/movie?name=${name}`)
             reset()

@@ -14,7 +14,7 @@ const urls = {
     },
     movies: {
         moviesList: `${discover}/${movies}`,
-        movieId: (movieId) => `${discover}/${movies}/${movieId}`
+        movieId: (movieId) => `${movies}/${movieId}`
     },
     search:{
         searchList:`${search}/${movies}`

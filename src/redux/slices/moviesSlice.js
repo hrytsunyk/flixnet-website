@@ -57,6 +57,9 @@ const moviesSlice = createSlice({
             })
             .addCase(getById.fulfilled, (state, action) => {
                 state.loading = false;
+                console.log(action.payload)
+                // const {backdrop_path,budget,genres,original_language,original_title,overview,
+                //     poster_path,release_date,runtime,vote_average,vote_count,production_companies} = action.payload;
                 state.movieById = action.payload;
             })
             .addCase(getById.pending, (state, action) => {
@@ -70,7 +73,8 @@ const moviesSlice = createSlice({
 const {reducer: moviesReducer} = moviesSlice;
 
 const moviesActions = {
-    getAll
+    getAll,
+    getById
 }
 
 export {

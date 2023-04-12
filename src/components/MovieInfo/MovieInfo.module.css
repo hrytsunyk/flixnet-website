@@ -1,0 +1,8 @@
+.MovieInfoFather{
+    display: flex;
+}
+.overview{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
