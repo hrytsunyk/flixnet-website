@@ -46,6 +46,7 @@ const moviesSlice = createSlice({
                 state.loading = false;
                 state.page = page;
                 state.movies = results;
+
             })
             .addCase(getAll.pending, (state, action) => {
                 state.loading = true;
@@ -57,15 +58,12 @@ const moviesSlice = createSlice({
             })
             .addCase(getById.fulfilled, (state, action) => {
                 state.loading = false;
-                console.log(action.payload)
-                // const {backdrop_path,budget,genres,original_language,original_title,overview,
-                //     poster_path,release_date,runtime,vote_average,vote_count,production_companies} = action.payload;
                 state.movieById = action.payload;
+
+
             })
             .addCase(getById.pending, (state, action) => {
                 state.loading = true;
-                // state.movieById = action.payload;
-
             })
     }
 })

@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import Poster from "../Poster/Poster";
 
 
@@ -10,6 +10,7 @@ const SearchMoviesListCard = ({id, original_title, vote_average, vote_count, pos
     return (
         <div>
             <Poster
+                id={id}
                 poster_path={poster_path}
                 original_title={original_title}
                 release_date={release_date}
