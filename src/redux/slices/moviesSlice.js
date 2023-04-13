@@ -64,7 +64,7 @@ const moviesSlice = createSlice({
             })
             .addCase(getById.pending, (state, action) => {
                 state.loading = true;
-                state.movieById = action.payload;
+                // state.movieById = action.payload;
 
             })
     }
