@@ -11,8 +11,11 @@ const MainLayout = () => {
     return (
         <div className={css.MainLayoutFather}>
             <Header/>
+            <div className={css.HrLine}/>
+
             {/*<GenresList/>*/}
             <Outlet/>
+            <div className={css.HrLine}/>
             <Footer/>
         </div>
     );

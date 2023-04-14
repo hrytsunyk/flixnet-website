@@ -4,8 +4,10 @@ import {RatingStars} from "../Rating/RatingStars";
 import css from './Poster.module.css';
 import {NavLink} from "react-router-dom";
 import {useSelector} from "react-redux";
+import {GenreBadge} from "../GenreBadge/GenreBadge";
+import {GenresList} from "../GenreList/GenresList";
 
-const Poster = ({id, original_title, vote_average, vote_count, poster_path, release_date}) => {
+const Poster = ({id, original_title, vote_average, vote_count, poster_path, release_date,genre_ids}) => {
 
     const {movieById,loading} = useSelector(state => state.movies);
 
@@ -18,7 +20,7 @@ const Poster = ({id, original_title, vote_average, vote_count, poster_path, rele
         {loading && <div>Loading>>>>>>>>>></div>}
 
             <div className={css.ListCardFather}>
-                {<div className={css.TitleCard}>
+                <div className={css.TitleCard}>
 
                     <div className={css.Title}>
                         <h4>{original_title}</h4>
@@ -36,7 +38,8 @@ const Poster = ({id, original_title, vote_average, vote_count, poster_path, rele
                         Vote count: ({vote_count})
                     </div>
 
-                </div>}
+                </div>
+
             </div>
 
         </NavLink>

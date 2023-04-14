@@ -5,6 +5,8 @@ import {useParams} from "react-router-dom";
 import {urls} from "../../configs/urls";
 
 import css from './MovieInfo.module.css';
+import {GenreBadge} from "../GenreBadge/GenreBadge";
+
 
 const MovieInfo = () => {
 
@@ -22,7 +24,6 @@ const MovieInfo = () => {
                 genres.push(genre)
         }
     }
-// movieById.genres.map(genre => console.log(genre))
 
 
     useEffect(() => {
@@ -42,6 +43,7 @@ const MovieInfo = () => {
 
                     <div className={css.describtion}>
                         <h1>{movieById.original_title}</h1>
+                        <div className={css.MovieGenre}>{genres.map((genre,index) => <GenreBadge genre={genre} key={index}/>)}</div>
                         <h5>Budget: {movieById.budget}</h5>
                         <h5>Language: {movieById.original_language}  </h5>
                         <h5>Release date: {movieById.release_date}</h5>

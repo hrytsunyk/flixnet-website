@@ -17,29 +17,29 @@ const MoviesList = () => {
         dispatch(moviesActions.getAll())
     }, [dispatch])
 
-
+    console.log(movies)
     return (
         <div className={css.MoviesList}>
             {loading && <div className={css.Spinner}><SpinnerIcon/></div>}
             {
                 movies &&
                 <div className={css.MoviesListMap}>
-                    {
-                        movies.map(
-                            movie =>
-                                <Poster
-                                    key={movie.id}
-                                    id={movie.id}
-                                    backdrop_path={movie.backdrop_path}
-                                    original_language={movie.original_language}
-                                    original_title={movie.original_title}
-                                    overview={movie.overview}
-                                    poster_path={movie.poster_path}
-                                    release_date={movie.release_date}
-                                    vote_average={movie.vote_average}
-                                    vote_count={movie.vote_count}
-                                />
-                        )
+                    {movies.map(
+                        movie =>
+                            <Poster
+                                key={movie.id}
+                                id={movie.id}
+                                backdrop_path={movie.backdrop_path}
+                                original_language={movie.original_language}
+                                original_title={movie.original_title}
+                                overview={movie.overview}
+                                poster_path={movie.poster_path}
+                                release_date={movie.release_date}
+                                vote_average={movie.vote_average}
+                                vote_count={movie.vote_count}
+                                genre_ids={movie.genre_ids}
+                            />
+                    )
                     }
                 </div>
             }

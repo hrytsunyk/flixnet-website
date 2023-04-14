@@ -25,6 +25,7 @@ const MyPagination = () => {
 
     return (
         <Pagination
+            sx={{color: 'red'}}
             count={500}
             page={+queryPageNumber}
             renderItem={ (item) => (

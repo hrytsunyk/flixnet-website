@@ -3,6 +3,26 @@ import {Box, Divider, Drawer, List, ListItem, ListItemButton, ListItemIcon, List
 import Button from "@mui/material/Button";
 import {GenresList} from "../GenreList/GenresList";
 
+import css from './OpenSlideBar.module.css';
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {
+    faArrowCircleDown,
+    faArrowDown,
+    faArrowDown91,
+    faArrowDownAZ,
+    faArrowDownWideShort,
+    faArrowsDownToLine,
+    faArrowTrendDown,
+    faArrowUp,
+    faCartArrowDown, faClipboardList,
+    faListAlt,
+    faListOl,
+    faListSquares,
+    faListUl,
+    faTriangleCircleSquare,
+    faTriangleExclamation
+} from "@fortawesome/free-solid-svg-icons";
+
 
 const TopSlideBar = () => {
     const [state, setState] = useState({
@@ -39,18 +59,11 @@ const TopSlideBar = () => {
     );
 
     return (
-        <div>
+        <div  className={css.OpenSlideBar}>
             {['top'].map((anchor) => (
                 <React.Fragment key={anchor}>
-                    <Button
-                        sx={{
-                          'margin':'10px',
-                            'display':'flex',
-                            'justify-content':'center',
-                            'align-items': 'center',
-                            'color':'grey',
-                        }}
-                        onClick={toggleDrawer(anchor, true)}>Genres</Button>
+                    <div
+                        onClick={toggleDrawer(anchor, true)}>Genres</div>
                     <Drawer
                         anchor={anchor}
                         open={state[anchor]}
@@ -60,6 +73,7 @@ const TopSlideBar = () => {
                     </Drawer>
                 </React.Fragment>
             ))}
+            <div className={css.triangle}/>
         </div>
     );
 };

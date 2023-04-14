@@ -18,7 +18,7 @@ const GenresList = () => {
 
     return (
         <div className={css.GenresList}>
-            {genresList.map(genre => <GenreBadge key={genre.id} genre={genre}/>)}
+            {genresList.map(genre => <GenreBadge key={genre.id} genre={genre} id={genre.id}/>)}
         </div>
     );
 };

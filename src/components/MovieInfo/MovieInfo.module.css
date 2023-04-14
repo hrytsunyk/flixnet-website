@@ -3,6 +3,7 @@
     height: 100vh;
     display: flex;
     justify-content: center;
+    background: #12121f;
     /*margin: 100px 0 0 0;*/
 }
 .overview{
@@ -17,15 +18,18 @@
     justify-content: center;
     align-items: flex-start;
     margin: 50px;
+    color: white;
 }
 
 .ImgMovieInfo{
-    width: 400px;
-    height: 600px;
-    /*height: 420px;*/
+    width: 340px;
     margin: 0 20px 0 0 ;
 }
 
 .describtion h1{
     margin: 0;
+}
+
+.MovieGenre{
+    display: flex;
 }
