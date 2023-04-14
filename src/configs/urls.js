@@ -18,6 +18,9 @@ const urls = {
     },
     search:{
         searchList:`${search}/${movies}`
+    },
+    genres: {
+        genresList: `${genres}/${movies}/list`
     }
 
 }

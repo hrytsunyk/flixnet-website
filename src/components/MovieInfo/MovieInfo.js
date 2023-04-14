@@ -37,16 +37,18 @@ const MovieInfo = () => {
 
 
             {movieById &&
-                <div>
-                    <img src={`${urls.base.getImg}/${movieById.poster_path}`} alt={`${movieById.title}`}/>
+                <div className={css.MovieInfo}>
+                    <img className={css.ImgMovieInfo} src={`${urls.base.getImg}/${movieById.poster_path}`} alt={`${movieById.title}`}/>
 
-                    <h5>Budget: {movieById.budget}</h5>
-                    <h5>Language: {movieById.original_language}  </h5>
-                    <h5>Release date: {movieById.release_date}</h5>
-                    <h5>Revenue: {movieById.revenue}</h5>
-                    <h5>Runtime: {movieById.runtime}</h5>
-                    <h5>{movieById.vote_count}</h5>
-                    <h5>Overview: {movieById.overview}</h5>
+                    <div className={css.describtion}>
+                        <h1>{movieById.original_title}</h1>
+                        <h5>Budget: {movieById.budget}</h5>
+                        <h5>Language: {movieById.original_language}  </h5>
+                        <h5>Release date: {movieById.release_date}</h5>
+                        <h5>Revenue: {movieById.revenue}</h5>
+                        <h5>Runtime: {movieById.runtime}</h5>
+                        <h4>Overview: {movieById.overview}</h4>
+                    </div>
                 </div>
             }
         </div>

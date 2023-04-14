@@ -1,8 +1,31 @@
 .MovieInfoFather{
+    width: 100%;
+    height: 100vh;
     display: flex;
+    justify-content: center;
+    /*margin: 100px 0 0 0;*/
 }
 .overview{
     width: 300px;
     display: flex;
     flex-direction: column;
+}
+
+.MovieInfo{
+    width: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 50px;
+}
+
+.ImgMovieInfo{
+    width: 400px;
+    height: 600px;
+    /*height: 420px;*/
+    margin: 0 20px 0 0 ;
+}
+
+.describtion h1{
+    margin: 0;
 }
