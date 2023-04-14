@@ -1,10 +1,55 @@
 .GenreBadge{
-    width: 120px;
+    width: 100px;
     height: 20px;
-    border: 1px solid black;
-    border-radius: 20px;
+    border-radius: 30px;
+    background: #19192a;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 5px 5px;
+    font-size: 12px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+/*.GenreBadge:hover{*/
+/*    background: #ffbe00;*/
+/*    cursor: pointer;*/
+/*    color: #12121f;*/
+/*}*/
+
+.GenreBadge:hover::before{
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 50%;
+    animation: rootBGimg 3s linear infinite;
+    transition: all 100ms linear;
+    cursor: pointer;
+    background: #ffbe00;
+}
+
+@keyframes rootBGimg {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+
+         }
+}
+
+.GenreBadge::after{
+    border-radius: 30px;
+    cursor: pointer;
+    background: #1e1e33;
+    content: '';
+    position: absolute;
+    inset: 1px;
+}
+
+.GenreBadge h5 {
+    z-index: +1;
+    cursor: pointer;
 }

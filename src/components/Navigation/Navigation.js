@@ -2,6 +2,7 @@ import React from 'react';
 import {NavLink} from "react-router-dom";
 
 import css from './Navigation.module.css';
+import {TopSlideBar} from "../Slidebars/TopSlidebar";
 
 const Navigation = () => {
     return (
@@ -18,9 +19,8 @@ const Navigation = () => {
                 <div className={css.NavBarTVshows}>TV shows</div>
             </NavLink>
 
-            <NavLink to={'plans'}>
-                <div className={css.NavBarPlans}>Plans</div>
-            </NavLink>
+            <TopSlideBar/>
+
             <NavLink to={'plans'}>
                 <div className={css.NavBarPlans}>Plans</div>
             </NavLink>

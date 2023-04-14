@@ -4,7 +4,6 @@ import {GenresList} from "../../components/GenreList/GenresList";
 const HomePage = () => {
     return (
         <div>
-            <GenresList/>
         </div>
     );
 };

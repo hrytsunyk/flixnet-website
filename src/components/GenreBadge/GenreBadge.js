@@ -6,13 +6,12 @@ const GenreBadge = ({genre}) => {
     console.log(genre)
 
     return (
-        <div>
+
             <div className={css.GenreBadge}>
                 {genre &&
-                    genre.name
+                    <h5>{genre.name}</h5>
                 }
             </div>
-        </div>
     );
 };
 

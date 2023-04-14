@@ -3,6 +3,8 @@ import {useDispatch, useSelector} from "react-redux";
 import {genreActions} from "../../redux/slices/genreSlice";
 import {GenreBadge} from "../GenreBadge/GenreBadge";
 
+import css from './GenresList.module.css';
+
 const GenresList = () => {
 
     const dispatch = useDispatch();
@@ -15,7 +17,7 @@ const GenresList = () => {
     console.log(genresList)
 
     return (
-        <div>
+        <div className={css.GenresList}>
             {genresList.map(genre => <GenreBadge key={genre.id} genre={genre}/>)}
         </div>
     );
