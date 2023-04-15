@@ -16,7 +16,7 @@ const Poster = ({id, original_title, vote_average, vote_count, poster_path, rele
 
     return (
 
-        <NavLink to={`/movie/${id}`}>
+        <NavLink className={css.NavCard} to={`/movie/${id}`}>
         {loading && <div>Loading>>>>>>>>>></div>}
 
             <div className={css.ListCardFather}>

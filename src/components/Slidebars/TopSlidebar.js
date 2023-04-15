@@ -47,7 +47,6 @@ const TopSlideBar = () => {
                     top:'50px',
                 }
             }
-            // role="presentation"
             onClick={toggleDrawer(anchor, false)}
             onKeyDown={toggleDrawer(anchor, false)}
         >

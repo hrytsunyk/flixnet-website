@@ -6,6 +6,8 @@ import {urls} from "../../configs/urls";
 
 import css from './MovieInfo.module.css';
 import {GenreBadge} from "../GenreBadge/GenreBadge";
+import {Rating} from "@mui/material";
+import {RatingStars} from "../Rating/RatingStars";
 
 
 const MovieInfo = () => {
@@ -49,6 +51,7 @@ const MovieInfo = () => {
                         <h5>Release date: {movieById.release_date}</h5>
                         <h5>Revenue: {movieById.revenue}</h5>
                         <h5>Runtime: {movieById.runtime}</h5>
+                        <RatingStars rating={movieById.vote_average}/>
                         <h4>Overview: {movieById.overview}</h4>
                     </div>
                 </div>
