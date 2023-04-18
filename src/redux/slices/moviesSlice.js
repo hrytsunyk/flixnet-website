@@ -6,6 +6,7 @@ const initialState = {
     movieById: [],
     page: null,
     loading: null,
+    loading2:null,
     error: null
 };
 
@@ -57,13 +58,13 @@ const moviesSlice = createSlice({
 
             })
             .addCase(getById.fulfilled, (state, action) => {
-                state.loading = false;
+                state.loading2 = false;
                 state.movieById = action.payload;
 
 
             })
             .addCase(getById.pending, (state, action) => {
-                state.loading = true;
+                state.loading2 = true;
             })
     }
 })

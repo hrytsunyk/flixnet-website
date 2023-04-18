@@ -26,7 +26,11 @@ const sortedByGenre = createSlice({
         builder
             .addCase(sortedGenres.fulfilled,(state, action)=>{
                const {results}=action.payload;
+                state.loading=false;
                 state.sortedByGenre=results;
+            })
+            .addCase(sortedGenres.pending, (state, action)=>{
+                state.loading=true;
             })
     }
 })

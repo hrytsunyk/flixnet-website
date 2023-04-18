@@ -5,6 +5,7 @@ import {useSearchParams} from "react-router-dom";
 import {SortedGenreListCard} from "../SortedGenreListCard/SortedGenreListCard";
 
 import css from './SortedGenreList.module.css';
+import {SpinnerIcon} from "../Icons/SpinnerIcon";
 
 const SortedGenreList = () => {
 
@@ -19,24 +20,27 @@ const SortedGenreList = () => {
     // console.log(nameQuery)
 
 
-    const {sortedByGenre} = useSelector(state => state.sortedGenres);
+    const {sortedByGenre,loading} = useSelector(state => state.sortedGenres);
     const {genresList} = useSelector(state => state.genres);
+    const [state, setState] = useState(nameQuery);
 
 
-    useEffect( () => {
+    useEffect(() => {
         dispatch(sortedGenresActions.sortedGenres({genreId}))
+    }, [dispatch, genreId, setState])
 
-    }, [dispatch, query, genreId,nameQuery])
+    localStorage.setItem('name', nameQuery)
+
+    const localStorageGenreTitle = localStorage.getItem('name');
 
     return (
         <div className={css.SortedMoviesList}>
+
+            {loading && <div className={css.Spinner}><SpinnerIcon/></div>}
+
             <div className={css.GenreName}>
-                {nameQuery &&
-                    genresList.map(genre =>
-                        <div key={genre.id}>
-                            {(genre.id === +genreId) ? <h2>{nameQuery.toUpperCase()}:</h2> : null}
-                        </div>)
-                }
+                <h2>{localStorageGenreTitle.toLowerCase().toUpperCase()}:</h2>
+                <h2 className={css.reflectionH2}>{localStorageGenreTitle.toLowerCase().toUpperCase()}:</h2>
             </div>
             {sortedByGenre && sortedByGenre.map(sortedMovie => <SortedGenreListCard key={sortedMovie.id}
                                                                                     movie={sortedMovie}/>)}

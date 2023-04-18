@@ -2,7 +2,8 @@ import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
 import {moviesService} from "../../services/moviesService";
 
 const initialState = {
-    genresList: []
+    genresList: [],
+    loading:null
 };
 
 const getGenreList = createAsyncThunk(
@@ -10,7 +11,6 @@ const getGenreList = createAsyncThunk(
     async (_,thunkAPI)=>{
       try {
           const {data} = await moviesService.getGenreList();
-          console.log(data)
           return data
       } catch (e) {
           thunkAPI.rejectWithValue(e.response.data)
@@ -26,7 +26,11 @@ const genreSlice = createSlice({
         builder
             .addCase(getGenreList.fulfilled, (state, action) => {
               const {genres} = action.payload;
+                state.loading=false;
                 state.genresList = genres;
+            })
+            .addCase(getGenreList.pending,(state, action)=>{
+                state.loading=true;
             })
     }
 })

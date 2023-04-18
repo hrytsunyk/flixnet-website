@@ -8,6 +8,7 @@ import css from './MovieInfo.module.css';
 import {GenreBadge} from "../GenreBadge/GenreBadge";
 import {Rating} from "@mui/material";
 import {RatingStars} from "../Rating/RatingStars";
+import {SpinnerIcon} from "../Icons/SpinnerIcon";
 
 
 const MovieInfo = () => {
@@ -16,7 +17,7 @@ const MovieInfo = () => {
 
     const {movieId} = useParams();
 
-    const {movieById, loading} = useSelector(state => state.movies);
+    const {movieById, loading2} = useSelector(state => state.movies);
 
     const genres = [];
 
@@ -30,16 +31,22 @@ const MovieInfo = () => {
 
     useEffect(() => {
         dispatch(moviesActions.getById({movieId}))
+        window.scroll({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+        })
     }, [dispatch, movieId])
 
     return (
 
         <div className={css.MovieInfoFather}>
 
-            {loading && <div>Loading>>>>>>.>.>></div>}
+            {loading2 && <div className={css.Spinner}><SpinnerIcon/></div>}
 
 
-            {movieById &&
+
+            {!loading2 &&
                 <div className={css.MovieInfo}>
                     <img className={css.ImgMovieInfo} src={`${urls.base.getImg}/${movieById.poster_path}`} alt={`${movieById.title}`}/>
 
