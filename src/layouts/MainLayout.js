@@ -6,13 +6,14 @@ import css from './MainLayout.module.css';
 import Footer from "../components/Footer/Footer";
 
 const MainLayout = () => {
+
     return (
         <div className={css.MainLayoutFather}>
+
             <Header/>
-            {/*<GenresList/>*/}
             <Outlet/>
-            <div className={css.HrLine}/>
             <Footer/>
+
         </div>
     );
 };

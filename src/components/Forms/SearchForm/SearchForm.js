@@ -1,11 +1,12 @@
 import React, {useEffect} from 'react';
 import {SearchIcon} from "../../Icons/SearchIcon";
 
-import css from './Search.css';
 import {useForm} from "react-hook-form";
 import {useNavigate, useSearchParams} from "react-router-dom";
-import {searchActions} from "../../../redux/slices/searchSlice";
+import {searchActions} from "../../../redux";
 import {useDispatch} from "react-redux";
+
+import css from './Search.css';
 
 
 const SearchForm = () => {

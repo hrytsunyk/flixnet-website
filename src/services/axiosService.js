@@ -1,5 +1,5 @@
 import axios from "axios";
-import {urls} from "../configs/urls";
+import {urls} from "../configs";
 
 // const accessTokenKey = urls.base.access_token;
 

@@ -1,6 +1,6 @@
-import React, {useEffect, useMemo, useState} from 'react';
+import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from "react-redux";
-import {sortedByGenreReducer, sortedGenresActions} from "../../redux/slices/sortedGenreSlice";
+import { sortedGenresActions} from "../../redux";
 import {useSearchParams} from "react-router-dom";
 import {SortedGenreListCard} from "../SortedGenreListCard/SortedGenreListCard";
 
@@ -17,21 +17,20 @@ const SortedGenreList = () => {
     const genreId = query.get('with_genres');
     const nameQuery = query.get('name');
 
-    // console.log(nameQuery)
 
 
-    const {sortedByGenre,loading} = useSelector(state => state.sortedGenres);
-    const {genresList} = useSelector(state => state.genres);
-    const [state, setState] = useState(nameQuery);
+    const {sortedByGenre, loading} = useSelector(state => state.sortedGenres);
 
 
     useEffect(() => {
         dispatch(sortedGenresActions.sortedGenres({genreId}))
-    }, [dispatch, genreId, setState])
+        window.scroll(0,0)
+    }, [dispatch, genreId])
+
 
     localStorage.setItem('name', nameQuery)
 
-    const localStorageGenreTitle = localStorage.getItem('name');
+    const localStorageGenreTitle =  localStorage.getItem('name');
 
     return (
         <div className={css.SortedMoviesList}>
@@ -40,10 +39,20 @@ const SortedGenreList = () => {
 
             <div className={css.GenreName}>
                 <h2>{localStorageGenreTitle.toLowerCase().toUpperCase()}:</h2>
-                <h2 className={css.reflectionH2}>{localStorageGenreTitle.toLowerCase().toUpperCase()}:</h2>
+
+                <h2 className={css.reflectionH2}>
+                    {localStorageGenreTitle.toUpperCase()}:
+                </h2>
             </div>
-            {sortedByGenre && sortedByGenre.map(sortedMovie => <SortedGenreListCard key={sortedMovie.id}
-                                                                                    movie={sortedMovie}/>)}
+
+            {sortedByGenre &&
+                sortedByGenre.map(sortedMovie =>
+                    <SortedGenreListCard
+                        key={sortedMovie.id}
+                        movie={sortedMovie}
+                    />
+                )
+            }
         </div>
     );
 };

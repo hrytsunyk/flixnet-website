@@ -1,5 +1,6 @@
 .SortedMoviesList{
     width: 100%;
+    height: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -7,6 +8,8 @@
     margin: 0 0 150px 0;
     background-clip: text;
     color: transparent;
+    min-height: 800px;
+
 }
 
 
@@ -26,6 +29,7 @@
     align-items: center;
     flex-direction: column;
     margin: 80px 0 0 0;
+
 }
 
 .GenreName h2{

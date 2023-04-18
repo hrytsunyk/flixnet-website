@@ -4,6 +4,7 @@ import {searchReducer} from "./slices/searchSlice";
 import {genreReducer} from "./slices/genreSlice";
 import {sortedByGenreReducer} from "./slices/sortedGenreSlice";
 
+
 const rootReducer = combineReducers({
     movies:moviesReducer,
     search:searchReducer,

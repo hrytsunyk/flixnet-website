@@ -3,7 +3,7 @@ import Pagination from '@mui/material/Pagination';
 import PaginationItem from '@mui/material/PaginationItem';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {Link, useSearchParams} from "react-router-dom";
 import {useEffect} from "react";
 import {moviesActions} from "../../redux/slices/moviesSlice";
@@ -13,6 +13,7 @@ const MyPagination = () => {
     const dispatch1 = useDispatch();
 
     const [query] = useSearchParams({page: '1'});
+    const {loading} = useSelector(state => state.movies);
 
     const queryPageNumber = query.get('page');
 
@@ -28,26 +29,29 @@ const MyPagination = () => {
 
 
     return (
-        <Pagination
-            sx ={{
-                ".MuiPaginationItem-page": {
-                    color: 'white'
+        <div>
+            {loading &&
+                <Pagination
+                sx={{
+                    ".MuiPaginationItem-page": {
+                        color: 'white'
+                    }
                 }
-            }
-            }
+                }
 
-            count={500}
-            page={+queryPageNumber}
-            renderItem={(item) => (
-                <PaginationItem
-                    component={Link}
-                    to={`/movies?page=${item.page}`}
-                    slots={{previous: ArrowBackIcon, next: ArrowForwardIcon}}
-                    {...item}
+                count={500}
+                page={+queryPageNumber}
+                renderItem={(item) => (
+                    <PaginationItem
+                        component={Link}
+                        to={`/movies?page=${item.page}`}
+                        slots={{previous: ArrowBackIcon, next: ArrowForwardIcon}}
+                        {...item}
 
-                />
-            )}
-        />
+                    />
+                )}
+            />}
+        </div>
     );
 }
 

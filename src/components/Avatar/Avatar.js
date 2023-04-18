@@ -1,31 +1,13 @@
-// import * as React from 'react';
-// import Avatar from '@mui/material/Avatar';
-// import Stack from '@mui/material/Stack';
-// import {urls} from "../../config/urls";
-// import MenuList from "@mui/material/MenuList";
-//
-// const AvatarImage = () => {
-//     return (
-//         <Stack direction="row" spacing={2}>
-//             <Avatar alt="Remy Sharp" src={`${urls.base.avatarImg}`} />
-//         </Stack>
-//     );
-// };
-//
-// export {
-//     AvatarImage
-// }
-
 import * as React from 'react';
-import Button from '@mui/material/Button';
+import {useNavigate} from "react-router-dom";
+
+
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Fade from '@mui/material/Fade';
-import {urls} from "../../configs/urls";
+import {urls} from "../../configs";
 import {Avatar, Stack} from "@mui/material";
 
-import css  from './AvatarMenuFather.css'
-import {useNavigate} from "react-router-dom";
 const AvatarImage = () => {
     const navigate = useNavigate();
     const [anchorEl, setAnchorEl] = React.useState(null);
