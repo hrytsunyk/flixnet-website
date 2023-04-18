@@ -1,15 +1,17 @@
 .HeaderFather{
+    width: 100%;
     height: 50px;
     /*background: #0e0e18;*/
     background: rgb(0, 0, 0, 0.4);
     backdrop-filter: blur(5px);
-    color: aliceblue;
+    color: #c5c5c5;
     display: flex;
     justify-content: space-around;
     padding: 0 40px 0 25px;
     align-items: center;
-    position: sticky;
+    position: fixed;
     top:0;
+    left: 0;
     z-index: +1;
 }
 
@@ -21,4 +23,12 @@
     position: sticky;
     top:0;
 
+}
+
+.HrLine{
+    width: 100%;
+    height: 1px;
+    background: #ffbe00;
+    position: fixed;
+    top: 50px;
 }

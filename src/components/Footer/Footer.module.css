@@ -1,6 +1,8 @@
 .Footer{
+    width: 100%;
     height: 300px;
-    background: #19192a;
+    background: rgb(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
 }
 
 .FooterLogo h2 {
@@ -24,4 +26,12 @@
     margin: 0;
     position: relative;
     top: -10px;
+}
+
+.HrLine{
+    width: 100%;
+    height: 1px;
+    background: #ffbe00;
+    position: fixed;
+    bottom:300px;
 }

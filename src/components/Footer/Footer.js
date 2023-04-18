@@ -8,6 +8,8 @@ import {Navigation} from "../Navigation/Navigation";
 const Footer = () => {
     return (
         <div className={css.Footer}>
+            <div className={css.HrLine}/>
+
             <div className={css.TopBlock}>
                 <div className={css.FooterLogo}><Logo/></div>
                 <div>

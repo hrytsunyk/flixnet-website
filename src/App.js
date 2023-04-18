@@ -9,6 +9,7 @@ import {useSelector} from "react-redux";
 import {SearchPage} from "./pages/SearchPage/SearchPage";
 import {NotFoundPage} from "./pages/NotFoundPage/NotFoundPage";
 import {MovieInfoPage} from "./pages/MovieInfoPage/MovieInfoPage";
+import {SortedGenresPage} from "./pages/SortedGenresPage/SortedGenresPage";
 
 const App = () => {
 
@@ -20,6 +21,7 @@ const App = () => {
                     <Route path={"tv_shows"} element={<TvShowsPage/>}/>
                     <Route path={"search/:movies"} element={<SearchPage/>}/>
                     <Route path={"movie/:movieId"} element={<MovieInfoPage/>}/>
+                    <Route path={"genre/:with_genres"} element={<SortedGenresPage/>}/>
                     <Route path={'*'} element={<NotFoundPage/>}/>
                 </Route>
             </Routes>

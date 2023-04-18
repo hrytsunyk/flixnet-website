@@ -17,6 +17,9 @@ const Header = () => {
                 <AvatarImage/>
             </div>
 
+            <div className={css.HrLine}/>
+
+
         </div>
     );
 };

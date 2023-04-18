@@ -1,12 +1,23 @@
 .MainLayoutFather{
     width: 100%;
+    height: 100%;
     background: #12121f;
+    /*position: fixed;*/
+    /*overflow-y: scroll;*/
+    scroll-behavior: smooth;
 }
 
-.HrLine{
-    width: 100%;
-    height: 1px;
-    background: #ffbe00;
-    position: fixed;
-    top: 50px;
-}
+/*.MainLayoutFather::after{*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    z-index: -1;*/
+/*    position: fixed;*/
+/*}*/
+
+/*.HrLine{*/
+/*    width: 100%;*/
+/*    height: 1px;*/
+/*    background: #ffbe00;*/
+/*    position: fixed;*/
+/*    top: 50px;*/
+/*}*/

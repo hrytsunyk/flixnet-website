@@ -1,0 +1,44 @@
+import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
+import {moviesService} from "../../services/moviesService";
+
+const initialState = {
+    sortedByGenre: [],
+    loading: null
+};
+
+const sortedGenres = createAsyncThunk(
+    'sortedByGenre/sortedGenres',
+    async ({genreId}, thunkAPI)=>{
+        try {
+            const {data} = await moviesService.getSortByGenre(genreId)
+            return data
+        } catch (e) {
+            thunkAPI.rejectWithValue(e.response.data)
+        }
+    }
+)
+
+const sortedByGenre = createSlice({
+    name: 'sortedByGenre',
+    initialState,
+    reducers: {},
+    extraReducers: builder => {
+        builder
+            .addCase(sortedGenres.fulfilled,(state, action)=>{
+               const {results}=action.payload;
+                state.sortedByGenre=results;
+            })
+    }
+})
+
+const {reducer: sortedByGenreReducer} = sortedByGenre;
+
+const sortedGenresActions = {
+    sortedGenres
+}
+
+export {
+    sortedByGenreReducer,
+    sortedGenresActions
+
+}

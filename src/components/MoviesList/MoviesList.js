@@ -1,10 +1,9 @@
 import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import {moviesActions} from "../../redux/slices/moviesSlice";
-import {MoviesListCard} from "../MoviesListCard/MoviesListCard";
 
 import css from './MoviesList.module.css';
-import {MyPagination, Pagination} from "../Pagination/Pagination";
+import {MyPagination} from "../Pagination/Pagination";
 import {SpinnerIcon} from "../Icons/SpinnerIcon";
 import Poster from "../Poster/Poster";
 
@@ -15,9 +14,14 @@ const MoviesList = () => {
 
     useEffect(() => {
         dispatch(moviesActions.getAll())
+        window.scroll({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+        })
+
     }, [dispatch])
 
-    console.log(movies)
     return (
         <div className={css.MoviesList}>
             {loading && <div className={css.Spinner}><SpinnerIcon/></div>}

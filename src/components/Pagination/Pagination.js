@@ -8,32 +8,43 @@ import {Link, useSearchParams} from "react-router-dom";
 import {useEffect} from "react";
 import {moviesActions} from "../../redux/slices/moviesSlice";
 
+
 const MyPagination = () => {
     const dispatch1 = useDispatch();
 
-    const [query, setQuery] = useSearchParams({page: '1'});
+    const [query] = useSearchParams({page: '1'});
 
     const queryPageNumber = query.get('page');
 
     useEffect((e) => {
         dispatch1(moviesActions.getAll({page: queryPageNumber}))
-        window.scroll(0,0)
-
-    }, [dispatch1, query]);
+        window.scroll({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+        })
+    }, [dispatch1, query, queryPageNumber]);
 
 
 
     return (
         <Pagination
-            sx={{color: 'red'}}
+            sx ={{
+                ".MuiPaginationItem-page": {
+                    color: 'white'
+                }
+            }
+            }
+
             count={500}
             page={+queryPageNumber}
-            renderItem={ (item) => (
+            renderItem={(item) => (
                 <PaginationItem
                     component={Link}
                     to={`/movies?page=${item.page}`}
                     slots={{previous: ArrowBackIcon, next: ArrowForwardIcon}}
                     {...item}
+
                 />
             )}
         />

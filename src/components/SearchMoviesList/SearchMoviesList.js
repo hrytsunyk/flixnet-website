@@ -17,7 +17,7 @@ const SearchMoviesList = () => {
     const {searchedMovies, loading, totalPages, errors} = useSelector(state => state.search);
 
 
-    const [query, setQuery] = useSearchParams({page: '1'});
+    const [query] = useSearchParams({page: '1'});
 
     const queryPageNumber = query.get('page');
     const queryName = query.get('name');
@@ -32,7 +32,6 @@ const SearchMoviesList = () => {
     return (
         <div className={css.SearchMoviesList}>
             {loading && <div className={css.Spinner}><SpinnerIcon/></div>}
-            {errors && <div className={css.Spinner}>Erorrrrrrr</div>}
 
             {searchedMovies &&
                 searchedMovies.map(
