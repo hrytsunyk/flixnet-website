@@ -8,7 +8,11 @@ const moviesService = {
     getSearching: (page = '1', name) => axiosService.get(urls.search.searchList, {params: {page, query: name}}),
     getGenreList: () => axiosService.get(urls.genres.genresList),
 
-    getSortByGenre: (genreId) => axiosService.get(urls.genres.sortedList, {params: {with_genres: genreId}})
+    getSortByGenre: (genreId) => axiosService.get(urls.genres.sortedList, {params: {with_genres: genreId}}),
+
+    getVideoById:(movieId)=> axiosService.get(urls.videos.videosById(movieId)),
+
+    getPopularList: ()=> axiosService.get(urls.movies.popularList)
 };
 
 export {

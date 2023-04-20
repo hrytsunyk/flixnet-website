@@ -1,4 +1,5 @@
-const [discover, movies, genres, search] = ['discover', 'movie', 'genre', 'search'];
+const [discover, movies, genres, search,videos,popular] =
+    ['discover', 'movie', 'genre', 'search','videos', 'popular'];
 
 const baseEndpoint = process.env.REACT_APP_BASE_URL;
 const getImg = process.env.REACT_APP_IMG_URL;
@@ -14,7 +15,8 @@ const urls = {
     },
     movies: {
         moviesList: `${discover}/${movies}`,
-        movieId: (movieId) => `${movies}/${movieId}`
+        movieId: (movieId) => `${movies}/${movieId}`,
+        popularList: `${movies}/${popular}`
     },
     search:{
         searchList:`${search}/${movies}`
@@ -23,6 +25,9 @@ const urls = {
         genresList: `${genres}/${movies}/list`,
         sortedList: `${discover}/${movies}`,
 
+    },
+    videos:{
+        videosById: (movieId)=>`${movies}/${movieId}/${videos}`
     }
 
 }

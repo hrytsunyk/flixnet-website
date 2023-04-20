@@ -4,6 +4,7 @@ import {moviesService} from "../../services";
 const initialState = {
     movies: [],
     movieById: [],
+    popular: [],
     page: null,
     loading: null,
     loading2:null,
@@ -15,7 +16,6 @@ const getAll = createAsyncThunk(
     async ({page}, thunkAPI) => {
         try {
             const {data} = await moviesService.getAll({page})
-            console.log(data)
             return data
         } catch (e) {
             thunkAPI.rejectWithValue(e.response.data)
@@ -35,6 +35,21 @@ const getById = createAsyncThunk(
         }
     }
 )
+
+const getPopular = createAsyncThunk(
+    'moviesSlice/getPopular',
+    async (_, thunkAPI) => {
+        try {
+            const {data} = await moviesService.getPopularList();
+            return data
+
+        } catch (e) {
+            thunkAPI.rejectWithValue(e.response.data)
+        }
+    }
+)
+
+
 
 const moviesSlice = createSlice({
     name: 'moviesSlice',
@@ -66,6 +81,11 @@ const moviesSlice = createSlice({
             .addCase(getById.pending, (state, action) => {
                 state.loading2 = true;
             })
+
+            .addCase(getPopular.fulfilled, (state, action)=>{
+                const {results}=action.payload;
+                state.popular=results;
+            })
     }
 })
 
@@ -73,7 +93,8 @@ const {reducer: moviesReducer} = moviesSlice;
 
 const moviesActions = {
     getAll,
-    getById
+    getById,
+    getPopular
 }
 
 export {

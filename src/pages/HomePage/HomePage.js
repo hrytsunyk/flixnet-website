@@ -1,9 +1,12 @@
 import React from 'react';
-import {GenresList} from "../../components/GenreList/GenresList";
+
+import css from './HomePage.module.css';
+import {PopularList} from "../../components/PopularList/PopularList";
 
 const HomePage = () => {
     return (
-        <div>
+        <div className={css.HomePage}>
+            <PopularList/>
         </div>
     );
 };

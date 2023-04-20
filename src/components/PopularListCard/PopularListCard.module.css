@@ -1,0 +1,6 @@
+.reflectionImg img{
+    height: 120px;
+    transform: rotatex(180deg) translatey(5px);
+    mask-image: linear-gradient(transparent 50%, white 200%);
+    filter: blur(10px) brightness(1.3);
+}
