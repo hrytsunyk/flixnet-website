@@ -6,7 +6,7 @@ import './index.css';
 import './components/PopularList/PopularList.css'
 import './components/Icons/SocialMediaIcons/SocialMediaIcons.css'
 import {BrowserRouter} from "react-router-dom";
-import {setupStore} from "./redux/store";
+import {setupStore} from "./redux";
 import {Provider} from "react-redux";
 
 const store = setupStore();
