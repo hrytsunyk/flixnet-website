@@ -25,7 +25,7 @@ const Poster = ({id, original_title, vote_average, vote_count, poster_path, rele
             <NavLink to={`/movie/${id}`}>
 
                 <div className={css.Title}>
-                    <h4>{original_title}</h4>
+                    <h4>{original_title.toUpperCase()}</h4>
                     <h5>{sliceDate}</h5>
                 </div>
 

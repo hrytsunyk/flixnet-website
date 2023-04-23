@@ -24,13 +24,13 @@ const PopularList = () => {
 
     return (
         <div className={'swiper-Father'}>
-            <div className={'top-title'}><h2>TOP-20</h2></div>
+            <div className={'top-title'}><h2>TOP-20:</h2></div>
             <Swiper
                 spaceBetween={30}
                 centeredSlides={false}
                 slidesPerView={4}
                 autoplay={{
-                    delay: 2500,
+                    delay: 5000,
                     disableOnInteraction: false,
                 }}
                 pagination={{
@@ -46,7 +46,6 @@ const PopularList = () => {
                     </SwiperSlide>
                 )}
 
-                <div className={'swiper-pagination'}></div>
             </Swiper>
         </div>
 

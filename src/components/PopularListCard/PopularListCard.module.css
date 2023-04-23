@@ -1,6 +1,52 @@
-.reflectionImg img{
-    height: 120px;
-    transform: rotatex(180deg) translatey(5px);
-    mask-image: linear-gradient(transparent 50%, white 200%);
-    filter: blur(10px) brightness(1.3);
+.TopImgReflection {
+    filter: drop-shadow(0 0 0.05rem #ffbe00);
+}
+
+
+
+.reflectionImg img {
+    height: 100px;
+    transform: rotatex(175deg) translatey(50px);
+    mask-image: linear-gradient(transparent 30%, white 200%);
+    filter: blur(3px) brightness(1.2);
+
+}
+
+.reflectionImgFather{
+    transition: 500ms;
+
+}
+
+.reflectionImgFather:hover{
+    transform: scale(1.1);
+    transition: 500ms;
+}
+
+.TitleMovie{
+    width: 300px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 0 5px 0 10px;
+    box-sizing: border-box;
+    position: relative;
+    bottom: 50px;
+    color: white;
+    background: rgb(0, 0, 0, 0.4);
+    backdrop-filter: blur(3px);
+    border-radius: 0px 0px 20px 20px;
+    transition: 500ms;
+
+}
+
+.titleImg{
+    width: 300px;
+    height: 400px;
+    margin: 0 30px 50px 30px;
+    position: relative;
+    top: 0;
+    cursor: pointer;
+    transition: 500ms;
 }

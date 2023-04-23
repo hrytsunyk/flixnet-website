@@ -20,8 +20,14 @@ const PopularListCard = ({movie}) => {
 
     return (
         <NavLink to={`/movie/${id}`}>
-            <img src={`${urls.base.getImg}${backdrop_path}`} alt=""/>
-            <div className={css.reflectionImg}><img src={`${urls.base.getImg}${backdrop_path}`} alt=""/></div>
+            <div className={css.reflectionImgFather}>
+                <div className={css.TitleImg}>
+                    <div className={css.TopImgReflection}><img src={`${urls.base.getImg}${backdrop_path}`} alt=""/>
+                    </div>
+                    <div className={css.TitleMovie}><h5>{original_title.toUpperCase()}</h5></div>
+                </div>
+                <div className={css.reflectionImg}><img src={`${urls.base.getImg}${backdrop_path}`} alt=""/></div>
+            </div>
         </NavLink>
     );
 };
