@@ -1,58 +1,79 @@
 import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from "react-redux";
-import { sortedGenresActions} from "../../redux";
-import {useSearchParams} from "react-router-dom";
+import {moviesActions, searchActions, sortedGenresActions} from "../../redux";
+import {Link, useSearchParams} from "react-router-dom";
 import {SortedGenreListCard} from "../SortedGenreListCard/SortedGenreListCard";
 
 import css from './SortedGenreList.module.css';
 import {SpinnerIcon} from "../Icons/SpinnerIcon";
+import Pagination from "@mui/material/Pagination";
+import PaginationItem from "@mui/material/PaginationItem";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import {SortedByGenrePagination} from "../Pagination/SortedByGenrePagination";
 
 const SortedGenreList = () => {
 
     const dispatch = useDispatch();
+    const dispatch1 = useDispatch();
 
     const [query] = useSearchParams();
 
 
-    const genreId = query.get('with_genres');
     const nameQuery = query.get('name');
+    // const genreId = query.get('with_genres');
+    // const queryPageNumber = query.get('page');
+    // const queryName = query.get('name');
 
 
 
     const {sortedByGenre, loading} = useSelector(state => state.sortedGenres);
 
-
-    useEffect(() => {
-        dispatch(sortedGenresActions.sortedGenres({genreId}))
-        window.scroll(0,0)
-    }, [dispatch, genreId])
-
+    console.log(sortedByGenre);
 
     localStorage.setItem('name', nameQuery)
-
     const localStorageGenreTitle =  localStorage.getItem('name');
+    // localStorage.setItem('with_genres', genreId)
+
+    // const localStorageGenreId =  localStorage.getItem('with_genres');
+    //
+    // useEffect(() => {
+    //     dispatch(sortedGenresActions.sortedGenres({page:queryPageNumber, genreId}))
+    //     window.scroll(0,0)
+    // }, [dispatch, genreId,queryPageNumber,dispatch1])
+
+
+
+
+
+
+
 
     return (
-        <div className={css.SortedMoviesList}>
+        <div className={css.SortedGenreListFather}>
 
             {loading && <div className={css.Spinner}><SpinnerIcon/></div>}
 
             <div className={css.GenreName}>
-                <h2>{localStorageGenreTitle.toLowerCase().toUpperCase()}:</h2>
-
+                <h2>
+                    {localStorageGenreTitle.toUpperCase()}:
+                </h2>
                 <h2 className={css.reflectionH2}>
                     {localStorageGenreTitle.toUpperCase()}:
                 </h2>
             </div>
 
-            {sortedByGenre &&
+            <div className={css.SortedGenreList}>{sortedByGenre &&
                 sortedByGenre.map(sortedMovie =>
                     <SortedGenreListCard
                         key={sortedMovie.id}
                         movie={sortedMovie}
                     />
                 )
-            }
+            }</div>
+
+            <div className={css.SortedGenreListPagination}><SortedByGenrePagination/></div>
+
         </div>
     );
 };

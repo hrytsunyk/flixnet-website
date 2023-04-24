@@ -1,20 +1,26 @@
+.SearchMoviesListFather{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
 .SearchMoviesList{
     width: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
-    margin: 50px 0 150px 0;
+    margin: 50px 0 50px 0;
 }
 
-/*.Pagination{*/
-/*    width: 100%;*/
-/*    height: 100%;*/
-/*    margin: 0px 0 50px 0;*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
-/*}*/
+.SearchMoviesListPagination{
+    width: 100%;
+    height: 100%;
+    margin: 0px 0 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 .Spinner{

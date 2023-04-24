@@ -8,7 +8,7 @@ import {GenreBadge} from "../GenreBadge/GenreBadge";
 import {GenresList} from "../GenreList/GenresList";
 import {SpinnerIcon} from "../Icons/SpinnerIcon";
 
-const Poster = ({id, original_title, vote_average, vote_count, poster_path, release_date,genre_ids}) => {
+const Poster = ({id, original_title, vote_average, vote_count, poster_path, release_date,genre_ids, genreId}) => {
 
     const {movieById,loading2} = useSelector(state => state.movies);
 

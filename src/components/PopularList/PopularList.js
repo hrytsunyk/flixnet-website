@@ -7,12 +7,14 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import './PopularList.css'
 import {PopularListCard} from "../PopularListCard/PopularListCard";
 
 import {Autoplay, Pagination, Navigation} from "swiper";
 
 
 const PopularList = () => {
+
     const dispatch = useDispatch();
     const {popular} = useSelector(state => state.movies);
 
@@ -20,32 +22,33 @@ const PopularList = () => {
         dispatch(moviesActions.getPopular())
     }, [dispatch])
 
-
     return (
         <div className={'swiper-Father'}>
             <div className={'top-title'}><h2>POPULAR MOVIES:</h2></div>
+
             <Swiper
                 spaceBetween={30}
                 centeredSlides={false}
                 slidesPerView={4}
                 autoplay={{
-                    delay: 5000,
+                    delay: 3000,
                     disableOnInteraction: false,
                 }}
                 pagination={{
                     clickable: true,
                 }}
                 navigation={false}
-                modules={[Autoplay, Pagination, Navigation]}
+                modules={[Autoplay, Pagination]}
                 className="mySwiper"
             >
-                {popular.map(movie=>
-                    <SwiperSlide>
+                {popular && popular.map(movie =>
+                    <SwiperSlide key={movie.id}>
                         <PopularListCard key={movie.id} movie={movie}/>
                     </SwiperSlide>
                 )}
 
             </Swiper>
+
         </div>
 
     );

@@ -6,28 +6,31 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import {useDispatch, useSelector} from "react-redux";
 import {Link, useSearchParams} from "react-router-dom";
 import {useEffect} from "react";
-import {moviesActions} from "../../redux";
+import {moviesActions, sortedGenresActions} from "../../redux";
 
 
-const MoviesListPagination = () => {
-    const dispatch = useDispatch();
+const SortedByGenrePagination = () => {
+    const dispatch1 = useDispatch();
 
     const [query] = useSearchParams({page: '1'});
+    const {page, totalPages} = useSelector(state => state.search);
 
+
+    const genreId = query.get('with_genres');
     const queryPageNumber = query.get('page');
+    const queryName = query.get('name');
 
-    useEffect((e) => {
-        dispatch(moviesActions.getAll({page: queryPageNumber}))
+    useEffect(() => {
+        dispatch1(sortedGenresActions.sortedGenres({page: queryPageNumber, genreId}))
         window.scroll({
             top: 0,
             left: 0,
             behavior: 'smooth'
         })
-    }, [dispatch, query, queryPageNumber]);
+    }, [dispatch1, genreId, queryPageNumber, dispatch1])
 
 
     return (
-
         <Pagination
             sx={
                 {
@@ -51,19 +54,18 @@ const MoviesListPagination = () => {
                     '.css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected:hover':
                         {
                             backgroundColor: 'rgb(255,190,0)',
-                        }
+                        },
                 }
             }
-            count={500}
+            count={+totalPages}
             page={+queryPageNumber}
             renderItem={(item) => (
                 <PaginationItem
-                    key={item}
                     component={Link}
-                    to={`/movies?page=${item.page}`}
+                    to={`?page=${item.page}&with_genres=${genreId}&name=${queryName}`}
                     slots={{previous: ArrowBackIcon, next: ArrowForwardIcon}}
+                    key={item}
                     {...item}
-
                 />
             )}
         />
@@ -73,5 +75,5 @@ const MoviesListPagination = () => {
 
 
 export {
-    MoviesListPagination
+    SortedByGenrePagination
 }

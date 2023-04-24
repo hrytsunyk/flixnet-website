@@ -11,29 +11,20 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import Pagination from "@mui/material/Pagination";
 import {moviesActions} from "../../redux/slices/moviesSlice";
+import {MoviesPage} from "../../pages";
+import {MoviesListPagination} from "../Pagination/MoviesListPagination";
+import {SearchingListPagination} from "../Pagination/SearchingListPagination";
 
 const SearchMoviesList = () => {
-    const dispatch = useDispatch();
     const {searchedMovies, loading, totalPages, errors} = useSelector(state => state.search);
 
 
-    const [query] = useSearchParams({page: '1'});
-
-    const queryPageNumber = query.get('page');
-    const queryName = query.get('name');
-
-    useEffect((e) => {
-        dispatch(moviesActions.getAll({page: queryPageNumber, name:queryName}))
-        window.scroll(0,0)
-
-    }, [dispatch, query]);
-
 
     return (
-        <div className={css.SearchMoviesList}>
+        <div className={css.SearchMoviesListFather}>
             {loading && <div className={css.Spinner}><SpinnerIcon/></div>}
 
-            {searchedMovies &&
+            <div className={css.SearchMoviesList}>{searchedMovies &&
                 searchedMovies.map(
                     searchedMovie =>
                         <SearchMoviesListCard
@@ -51,18 +42,9 @@ const SearchMoviesList = () => {
                 )
             }
 
-            <Pagination
-                count={+totalPages}
-                page={+queryPageNumber}
-                renderItem={ (item) => (
-                    <PaginationItem
-                        component={Link}
-                        to={`?page=${item.page}&name=${queryName}`}
-                        slots={{previous: ArrowBackIcon, next: ArrowForwardIcon}}
-                        {...item}
-                    />
-                )}
-            />
+            </div>
+            <div className={css.SearchMoviesListPagination}><SearchingListPagination/></div>
+
         </div>
     );
 };

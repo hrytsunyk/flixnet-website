@@ -9,21 +9,27 @@ import {useEffect} from "react";
 import {moviesActions} from "../../redux";
 
 
-const MoviesListPagination = () => {
+const SearchingListPagination = () => {
     const dispatch = useDispatch();
+    const {searchedMovies, loading, totalPages, errors} = useSelector(state => state.search);
+
 
     const [query] = useSearchParams({page: '1'});
 
+
     const queryPageNumber = query.get('page');
+    const queryName = query.get('name');
+    // const genreId = query.get('with_genres');
 
     useEffect((e) => {
-        dispatch(moviesActions.getAll({page: queryPageNumber}))
+        dispatch(moviesActions.getAll({page: queryPageNumber, name: queryName}))
         window.scroll({
             top: 0,
             left: 0,
             behavior: 'smooth'
         })
-    }, [dispatch, query, queryPageNumber]);
+
+    }, [dispatch, query]);
 
 
     return (
@@ -54,16 +60,15 @@ const MoviesListPagination = () => {
                         }
                 }
             }
-            count={500}
+            count={+totalPages}
             page={+queryPageNumber}
             renderItem={(item) => (
                 <PaginationItem
                     key={item}
                     component={Link}
-                    to={`/movies?page=${item.page}`}
+                    to={`/search/movies?page=${item.page}&name=${queryName}`}
                     slots={{previous: ArrowBackIcon, next: ArrowForwardIcon}}
                     {...item}
-
                 />
             )}
         />
@@ -73,5 +78,5 @@ const MoviesListPagination = () => {
 
 
 export {
-    MoviesListPagination
+    SearchingListPagination
 }

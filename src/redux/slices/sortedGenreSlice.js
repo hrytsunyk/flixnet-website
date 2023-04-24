@@ -8,9 +8,9 @@ const initialState = {
 
 const sortedGenres = createAsyncThunk(
     'sortedByGenre/sortedGenres',
-    async ({genreId}, thunkAPI)=>{
+    async ({page,genreId}, thunkAPI)=>{
         try {
-            const {data} = await moviesService.getSortByGenre(genreId)
+            const {data} = await moviesService.getSortByGenre(page,genreId)
             return data
         } catch (e) {
             thunkAPI.rejectWithValue(e.response.data)

@@ -3,7 +3,8 @@ import {moviesService} from "../../services";
 
 const initialState = {
     genresList: [],
-    loading:null
+    loading:null,
+    page: null
 };
 
 const getGenreList = createAsyncThunk(
@@ -25,7 +26,7 @@ const genreSlice = createSlice({
     extraReducers: builder => {
         builder
             .addCase(getGenreList.fulfilled, (state, action) => {
-              const {genres} = action.payload;
+                const {genres} = action.payload;
                 state.loading=false;
                 state.genresList = genres;
             })
