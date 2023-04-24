@@ -4,6 +4,7 @@ import '@csstools/normalize.css';
 import {App} from './App';
 import './index.css';
 import './components/PopularList/PopularList.css'
+import './components/Pagination/MoviesListPagination'
 import './components/Icons/SocialMediaIcons/SocialMediaIcons.css'
 import {BrowserRouter} from "react-router-dom";
 import {setupStore} from "./redux";

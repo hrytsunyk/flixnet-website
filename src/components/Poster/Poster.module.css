@@ -3,6 +3,8 @@
     transition: 500ms;
     position: relative;
     margin: 50px 0;
+    filter: drop-shadow(0 0 0.05rem #ffbe00);
+
 }
 
 
@@ -11,7 +13,7 @@
     width: 280px;
     height: 380px;
     cursor: pointer;
-    border-radius: 30px;
+    border-radius: 20px;
     transition: 500ms;
 }
 
@@ -28,7 +30,7 @@
     color: white;
     background: rgb(0, 0, 0, 0.4);
     backdrop-filter: blur(3px);
-    border-radius: 30px 30px 0px 0;
+    border-radius: 20px 20px 0 0;
     transition: 500ms;
 
 }

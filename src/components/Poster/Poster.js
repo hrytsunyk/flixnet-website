@@ -37,7 +37,7 @@ const Poster = ({id, original_title, vote_average, vote_count, poster_path, rele
 
                 <div className={css.RatingYear}>
                     <RatingStars rating={vote_average}/>
-                    Vote count: ({vote_count})
+                    Total votes: {vote_count}
                 </div>
 
         </NavLink>

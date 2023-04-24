@@ -24,7 +24,7 @@ export * from './MoviesListCard/MoviesListCard';
 export * from './MoviesListCard/MoviesListCard.module.css';
 export * from './Navigation/Navigation';
 export * from './Navigation/Navigation.module.css';
-export * from './Pagination/Pagination';
+export * from './Pagination/MoviesListPagination';
 export * from './Poster/Poster';
 export * from './Poster/Poster.module.css';
 export * from './Rating/RatingStars';

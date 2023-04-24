@@ -1,9 +1,9 @@
 import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from "react-redux";
-import {moviesActions} from "../../redux/slices/moviesSlice";
+import {moviesActions} from "../../redux";
 
 import css from './MoviesList.module.css';
-import {MyPagination} from "../Pagination/Pagination";
+import {MoviesListPagination} from "../Pagination/MoviesListPagination";
 import {SpinnerIcon} from "../Icons/SpinnerIcon";
 import Poster from "../Poster/Poster";
 
@@ -47,7 +47,7 @@ const MoviesList = () => {
                     }
                 </div>
             }
-            {<div className={css.Pagination}><MyPagination/></div>}
+            {<div className={css.Pagination}><MoviesListPagination/></div>}
         </div>
     );
 };

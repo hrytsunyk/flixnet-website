@@ -7,7 +7,6 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import './PopularList.css';
 import {PopularListCard} from "../PopularListCard/PopularListCard";
 
 import {Autoplay, Pagination, Navigation} from "swiper";
@@ -24,7 +23,7 @@ const PopularList = () => {
 
     return (
         <div className={'swiper-Father'}>
-            <div className={'top-title'}><h2>TOP-20:</h2></div>
+            <div className={'top-title'}><h2>POPULAR MOVIES:</h2></div>
             <Swiper
                 spaceBetween={30}
                 centeredSlides={false}
@@ -40,7 +39,7 @@ const PopularList = () => {
                 modules={[Autoplay, Pagination, Navigation]}
                 className="mySwiper"
             >
-                {popular.map(movie =>
+                {popular.map(movie=>
                     <SwiperSlide>
                         <PopularListCard key={movie.id} movie={movie}/>
                     </SwiperSlide>

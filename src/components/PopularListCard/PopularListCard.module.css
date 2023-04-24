@@ -14,7 +14,10 @@
 
 .reflectionImgFather{
     transition: 500ms;
-
+display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .reflectionImgFather:hover{
@@ -41,12 +44,10 @@
 
 }
 
-.titleImg{
-    width: 300px;
-    height: 400px;
-    margin: 0 30px 50px 30px;
+.RatingStars{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: relative;
-    top: 0;
-    cursor: pointer;
-    transition: 500ms;
+    margin: 0 0 0 10px;
 }

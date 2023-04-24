@@ -52,7 +52,7 @@ const MovieInfo = () => {
 
                     <div className={css.describtion}>
                         <h1>{movieById.original_title}</h1>
-                        <div className={css.MovieGenre}>{genres.map((genre,index) => <GenreBadge genre={genre} key={index}/>)}</div>
+                        <div className={css.MovieGenre}>{genres.map((genre,index) => <GenreBadge genre={genre}  key={index}/>)}</div>
                         <h5>Budget: {movieById.budget}</h5>
                         <h5>Language: {movieById.original_language}  </h5>
                         <h5>Release date: {movieById.release_date}</h5>
