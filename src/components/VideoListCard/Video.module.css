@@ -1,0 +1,13 @@
+.hrLine{
+    width: 300px;
+    height: 1px;
+    background: #ffbe00;
+    margin: 50px 0 50px 0;
+}
+.VideoListCardFather{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
