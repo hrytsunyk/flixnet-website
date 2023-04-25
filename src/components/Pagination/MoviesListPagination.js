@@ -33,24 +33,29 @@ const MoviesListPagination = () => {
                 {
                     '.css-1v2lvtn-MuiPaginationItem-root':
                         {
-                            color: 'white'
+                            color: 'white',
+                            fontWeight:'900'
                         },
                     '.css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root':
                         {
-                            backgroundColor: 'rgba(255,255,255,0.11)',
-                            color: 'white'
+                            backgroundColor: 'rgba(255,255,255,0.1)',
+                            color: 'white',
+                            fontWeight:'900'
                         },
                     '.css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root:hover':
                         {
                             backgroundColor: 'rgb(255,190,0)',
+
                         },
                     '.css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected':
                         {
                             backgroundColor: 'rgb(255,190,0)',
+
                         },
                     '.css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected:hover':
                         {
                             backgroundColor: 'rgb(255,190,0)',
+
                         }
                 }
             }

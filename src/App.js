@@ -1,17 +1,19 @@
 import React from 'react';
-import {Route, Routes} from "react-router-dom";
+import {Navigate, Route, Routes} from "react-router-dom";
 
 import {MainLayout} from "./layouts";
 import {
     HomePage, MovieInfoPage, MoviesPage,
     NotFoundPage, SearchPage, SortedGenresPage, TvShowsPage
 } from "./pages";
+import {Home} from "@mui/icons-material";
 
 const App = () => {
 
     return (
         <Routes>
             <Route path={'/'} element={<MainLayout/>}>
+                <Route index element={<Navigate to={'home'}/>}/>
                 <Route path={"home"} element={<HomePage/>}/>
                 <Route path={"movies"} element={<MoviesPage/>}/>
                 <Route path={"tv_shows"} element={<TvShowsPage/>}/>

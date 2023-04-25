@@ -1,66 +1,70 @@
-
-
 .swiper-Father {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    flex-wrap: wrap;
     margin: 50px 0 0 0;
 }
 
 
-.top-title{
+.top-title {
     width: 100%;
     color: white;
     margin: 0 0 0 30px;
     display: flex;
-    justify-content: cenflex-startter;
+    justify-content: flex-start;
     align-items: center;
 }
-.top-title h2{
+
+.top-title h2 {
     margin: 20px 0 0 0;
 }
 
 .swiper {
     width: 100%;
     height: 300px;
-    /*margin: 0 20px 0 0;*/
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+
+
 }
 
+
 .swiper-slide {
-    width: 300px;
+    width: 100vh;
     height: 380px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 
 }
 
+/*.swiper-slide img {*/
+/*    display: block;*/
+/*    width: 100vh;*/
+/*    height: 100%;*/
+/*    object-fit: cover;*/
+/*    cursor: grab;*/
+/*    z-index: -1;*/
+/*}*/
 
-.swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    cursor: grab;
-
-}
-
-.swiper-wrapper img{
+.swiper-wrapper img {
     width: 300px;
     border-radius: 20px;
-
-
+    z-index: -1;
 }
 
-.swiper-wrapper{
+.swiper-wrapper {
     width: 200px;
     margin: 0;
     z-index: -1;
-
 }
 
-.swiper-pagination-bullet{
+.swiper-pagination-bullet {
     margin: 0;
     background: #ffbe00;
 }

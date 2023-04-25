@@ -10,7 +10,7 @@ import "swiper/css/navigation";
 import './PopularList.css'
 import {PopularListCard} from "../PopularListCard/PopularListCard";
 
-import {Autoplay, Pagination, Navigation} from "swiper";
+import {Autoplay, Pagination} from "swiper";
 
 
 const PopularList = () => {

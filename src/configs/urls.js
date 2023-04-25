@@ -6,12 +6,15 @@ const getImg = process.env.REACT_APP_IMG_URL;
 const getAvatar =process.env.REACT_APP_AVATAR_IMG;
 const access_token = process.env.REACT_APP_ACCESS;
 
+const youTube= 'https://www.youtube.com/embed/'
+
 const urls = {
     base: {
         baseEndpoint,
         getImg,
         getAvatar,
-        access_token
+        access_token,
+        youTube
     },
     movies: {
         moviesList: `${discover}/${movies}`,

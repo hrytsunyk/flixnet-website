@@ -7,13 +7,13 @@
     margin: 50px 0 0 0;
 }
 .overview{
-    width: 300px;
+    width: 400px;
     display: flex;
     flex-direction: column;
 }
 
 .MovieInfo{
-    width: 100vh;
+    width: 800px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -28,11 +28,17 @@
 
 .describtion h1{
     margin: 0;
+    width: 400px;
+    /*text-align: center;*/
+
 }
 
 .MovieGenre{
+    width: 400px;
     display: flex;
     justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
     margin: 10px 0 5px -5px;
 }
 
@@ -41,4 +47,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.hrLine{
+    width: 100px;
+    background: #ffbe00;
 }
