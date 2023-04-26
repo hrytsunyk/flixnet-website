@@ -14,6 +14,7 @@
 
 .MovieInfo{
     width: 800px;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -29,7 +30,6 @@
 .describtion h1{
     margin: 0;
     width: 400px;
-    /*text-align: center;*/
 
 }
 
@@ -40,6 +40,7 @@
     align-items: center;
     flex-wrap: wrap;
     margin: 10px 0 5px -5px;
+
 }
 
 .Spinner {

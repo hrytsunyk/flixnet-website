@@ -2,7 +2,7 @@
     width: 300px;
     height: 1px;
     background: #ffbe00;
-    margin: 50px 0 50px 0;
+    margin: 0px 0 50px 0;
 }
 .VideoListCardFather{
     display: flex;
@@ -11,3 +11,11 @@
     flex-direction: column;
 }
 
+iframe{
+    width:800px;
+    height:500px;
+    border-style: none;
+    border-radius: 20px;
+    filter: drop-shadow(0 0 0.05rem #ffbe00);
+    margin: 0 0 50px 0;
+}

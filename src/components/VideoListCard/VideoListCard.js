@@ -6,24 +6,17 @@ import {urls} from "../../configs";
 import css from './Video.module.css';
 
 const VideoListCard = ({video}) => {
-    const {name,key, type} = video;
+    const {name, key, type} = video;
 
 
     return (
         <div className={css.VideoListCardFather}>
 
             <div className={css.hrLine}></div>
-
-         <iframe
-             width="800"
-             height="500"
-             src={`${urls.base.youTube}${key}`}
-             style={{borderStyle: "none"}}
-             allow="fullscreen"
-         >
-
-         </iframe>
-            <div className={css.hrLineBottom}></div>
+            <iframe
+                src={`${urls.base.youTube}${key}`}
+                allow="fullscreen"
+            />
 
         </div>
     );
