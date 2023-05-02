@@ -3,29 +3,30 @@
 }
 
 
-
 .reflectionImg img {
-    height: 100px;
-    transform: rotatex(175deg) translatey(50px);
-    mask-image: linear-gradient(transparent 30%, white 200%);
+    height: 50px;
+    transform: rotatex(185deg) translatey(50px);
+    mask-image: linear-gradient(transparent 30%, white 180%);
     filter: blur(3px) brightness(1.2);
+
 
 }
 
-.reflectionImgFather{
+.reflectionImgFather {
     transition: 500ms;
-display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
 }
 
-.reflectionImgFather:hover{
+.reflectionImgFather:hover {
     transform: scale(1.1);
     transition: 500ms;
 }
 
-.TitleMovie{
+.TitleMovie {
     width: 300px;
     height: 50px;
     display: flex;
@@ -44,7 +45,7 @@ display: flex;
 
 }
 
-.RatingStars{
+.RatingStars {
     display: flex;
     justify-content: space-between;
     align-items: center;

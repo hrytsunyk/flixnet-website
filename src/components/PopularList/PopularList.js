@@ -34,19 +34,19 @@ const PopularList = () => {
                         slidesPerView: 1,
                         spaceBetween: 30
                     },
-                    480: {
+                    670: {
                         slidesPerView: 2,
                         spaceBetween: 10
                     },
-                    760: {
+                    890: {
                         slidesPerView: 3,
                         spaceBetween: 30,
                     },
-                    1024: {
-                        slidesPerView: 3,
+                    1020: {
+                        slidesPerView: 2,
                         spaceBetween: 30
                     },
-                    1280: {
+                    1021: {
                         slidesPerView: 4,
                         spaceBetween: 30
                     },

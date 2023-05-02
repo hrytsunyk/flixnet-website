@@ -1,31 +1,56 @@
-.HeaderFather{
+@media screen and (max-width: 375px) {
+    .HeaderFather {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: sticky;
+        top: 0;
+
+    }
+
+    .HeaderFather .LogoNav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .NavigationBar {
+        display: none;
+    }
+
+    h2 {
+        font-size: 15px;
+    }
+
+}
+
+.HeaderFather {
     width: 100%;
-    height: 50px;
+    height: 60px;
     /*background: #0e0e18;*/
-    background: rgb(0, 0, 0, 0.4);
+    background: rgb(13, 13, 23);
     backdrop-filter: blur(5px);
     color: #c5c5c5;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 0 40px 0 25px;
     align-items: center;
     position: fixed;
-    top:0;
+    top: 0;
     left: 0;
     z-index: +2;
 }
 
-.LogoNav{
-    width: 300px;
+.LogoNav {
+    width: 200px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top:0;
+    /*align-items: center;*/
+    /*position: sticky;*/
+    /*top: 0;*/
 
 }
 
-.HrLine{
+.HrLine {
     width: 100%;
     height: 1px;
     background: #ffbe00;

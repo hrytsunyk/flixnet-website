@@ -10,10 +10,10 @@ const Header = () => {
     return (
         <div className={css.HeaderFather}>
             <Logo/>
-            <Navigation/>
+            <SearchForm/>
 
             <div className={css.LogoNav}>
-                <SearchForm/>
+            {/*<div className={css.NavigationBar}><Navigation/></div>*/}
                 <AvatarImage/>
             </div>
 

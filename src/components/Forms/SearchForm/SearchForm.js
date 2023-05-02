@@ -12,7 +12,7 @@ import css from './Search.css';
 const SearchForm = () => {
     const {handleSubmit, register, reset} = useForm();
 
-    const [query, setQuery] = useSearchParams({page:'1'});
+    const [query, setQuery] = useSearchParams({page: '1'});
 
     const dispatch = useDispatch();
 
@@ -23,13 +23,13 @@ const SearchForm = () => {
     const queryPageNumber = query.get('page');
 
 
-    useEffect(()=>{
-        dispatch(searchActions.getSearch({page:queryPageNumber,name:queryName}))
-    },[dispatch,query,queryPageNumber])
+    useEffect(() => {
+        dispatch(searchActions.getSearch({page: queryPageNumber, name: queryName}))
+    }, [dispatch, query, queryPageNumber])
 
-    const findMovie =  async (dataInput) => {
+    const findMovie = async (dataInput) => {
         const {name} = dataInput;
-        if (name !== '' ) {
+        if (name !== '') {
             setQuery(name)
             navigate(`search/movie?name=${name}`)
             reset()
@@ -37,10 +37,10 @@ const SearchForm = () => {
     };
 
     return (
-            <form onSubmit={handleSubmit(findMovie)}>
-                <input placeholder={'Search'} {...register('name')}/>
-                <button><SearchIcon/></button>
-            </form>
+        <form onSubmit={handleSubmit(findMovie)}>
+            <input placeholder={'Search'} {...register('name')}/>
+            <SearchIcon/>
+        </form>
     );
 };
 
