@@ -17,7 +17,7 @@ const VideoList = () => {
 
     return (
         <div>
-            {videoList.map((video, index) => (video.name.includes('Official Trailer') ? <VideoListCard key={index} video={video}/> : null))}
+            {videoList && videoList.map((video, index) => (video.name.includes('Official Trailer') ? <VideoListCard key={index} video={video}/> : null))}
         </div>
     );
 };

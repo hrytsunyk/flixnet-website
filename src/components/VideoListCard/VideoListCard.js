@@ -13,11 +13,12 @@ const VideoListCard = ({video}) => {
         <div className={css.VideoListCardFather}>
 
             <div className={css.hrLine}></div>
-            <iframe
-                src={`${urls.base.youTube}${key}`}
-                allow="fullscreen"
-            />
-
+            <div className={css.iframeFather}>
+                < iframe
+                    src={`${urls.base.youTube}${key}`}
+                    allow="fullscreen"
+                />
+            </div>
         </div>
     );
 };

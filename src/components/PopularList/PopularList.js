@@ -22,23 +22,48 @@ const PopularList = () => {
         dispatch(moviesActions.getPopular())
     }, [dispatch])
 
+
     return (
         <div className={'swiper-Father'}>
             <div className={'top-title'}><h2>POPULAR MOVIES:</h2></div>
 
             <Swiper
-                spaceBetween={30}
                 centeredSlides={false}
-                slidesPerView={4}
+                breakpoints={{
+                    0: {
+                        slidesPerView: 1,
+                        spaceBetween: 30
+                    },
+                    480: {
+                        slidesPerView: 2,
+                        spaceBetween: 10
+                    },
+                    760: {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 30
+                    },
+                    1280: {
+                        slidesPerView: 4,
+                        spaceBetween: 30
+                    },
+
+                }}
+                slidesPerView={1}
                 autoplay={{
                     delay: 3000,
                     disableOnInteraction: false,
                 }}
                 pagination={{
                     clickable: true,
+
                 }}
                 navigation={false}
                 modules={[Autoplay, Pagination]}
+                speed={500}
                 className="mySwiper"
             >
                 {popular && popular.map(movie =>
@@ -52,7 +77,7 @@ const PopularList = () => {
         </div>
 
     );
-};
+}
 
 export {
     PopularList
