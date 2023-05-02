@@ -43,14 +43,14 @@
 .top-title {
     width: 100%;
     color: white;
-    margin: 0 0 30px 30px;
+    margin: 0 0 0px 50px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
-.top-title h2 {
-    margin: 20px 0 0 0;
+.top-title h3 {
+    margin: 20px 0 0 20px;
 }
 
 .swiper {
@@ -58,6 +58,8 @@
     height: 250px;
     display: block;
     margin: auto;
+    padding: 20px;
+    box-sizing: border-box;
     /*flex-wrap: wrap;*/
 
 }

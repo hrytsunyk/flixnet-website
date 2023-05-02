@@ -39,7 +39,7 @@ const SearchForm = () => {
     return (
         <form onSubmit={handleSubmit(findMovie)}>
             <input placeholder={'Search'} {...register('name')}/>
-            <SearchIcon/>
+            <button><SearchIcon/></button>
         </form>
     );
 };

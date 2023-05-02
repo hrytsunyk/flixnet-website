@@ -1,11 +1,12 @@
 .FooterFather{
-    /*width: 100vh;*/
+    width: 100%;
     height: 300px;
     background: rgb(0, 0, 0, 0.4);
     backdrop-filter: blur(5px);
     display: flex;
     justify-content: center;
     align-items: flex-start;
+
 }
 
 .FooterLogo h2 {

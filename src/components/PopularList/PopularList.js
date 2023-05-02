@@ -25,7 +25,7 @@ const PopularList = () => {
 
     return (
         <div className={'swiper-Father'}>
-            <div className={'top-title'}><h2>POPULAR MOVIES:</h2></div>
+            <div className={'top-title'}><h3>Popular movies:</h3></div>
 
             <Swiper
                 centeredSlides={false}
@@ -52,18 +52,18 @@ const PopularList = () => {
                     },
 
                 }}
-                slidesPerView={1}
+                // slidesPerView={1}
                 autoplay={{
                     delay: 3000,
-                    disableOnInteraction: false,
+                    // disableOnInteraction: false,
+                    pauseOnMouseEnter:true
                 }}
                 pagination={{
                     clickable: true,
-
                 }}
                 navigation={false}
                 modules={[Autoplay, Pagination]}
-                speed={500}
+                speed={3000}
                 className="mySwiper"
             >
                 {popular && popular.map(movie =>
