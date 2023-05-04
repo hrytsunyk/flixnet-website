@@ -1,7 +1,5 @@
-import React, {useEffect} from 'react';
-import {useDispatch, useSelector} from "react-redux";
-import {moviesActions} from "../../redux";
-import Poster from "../Poster/Poster";
+import React from 'react';
+import { useSelector} from "react-redux";
 import TopRatedListCard from "../TopRatedListCard/TopRatedListCard";
 import css from './TopRatedList.module.css';
 import {TopRatedListPagination} from "../Pagination/TopRatedListPagination";

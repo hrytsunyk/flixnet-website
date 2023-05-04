@@ -13,7 +13,7 @@ const VideoList = () => {
 
     useEffect(() => {
         dispatch(videoActions.getVideoList({movieId}))
-    }, [dispatch])
+    }, [dispatch, movieId])
 
     return (
         <div>

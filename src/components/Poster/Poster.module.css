@@ -2,7 +2,7 @@
     height: 100%;
     transition: 500ms;
     position: relative;
-    margin: 50px 0;
+    /*margin: 50px 0;*/
     filter: drop-shadow(0 0 0.05rem #ffbe00);
 }
 
@@ -47,7 +47,7 @@
 .TitleCard{
     width: 280px;
     height: 400px;
-    margin: 0 30px 50px 30px;
+    margin: 0 40px 50px 40px;
     position: relative;
     top: 0;
     cursor: pointer;

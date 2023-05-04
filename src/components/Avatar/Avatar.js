@@ -15,7 +15,6 @@ const AvatarImage = () => {
 
     const [query] = useSearchParams();
     const login = query.get('auth');
-    console.log(login)
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
     };

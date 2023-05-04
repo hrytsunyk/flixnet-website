@@ -37,7 +37,7 @@ const TopSlideBar = () => {
 
     return (
         <div className={css.OpenSlideBar}>
-            {['Left'].map((anchor) => (
+            {['left'].map((anchor) => (
                 <React.Fragment key={anchor}>
                     <div onClick={toggleDrawer(anchor, true)}>
                         Genres

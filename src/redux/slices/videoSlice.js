@@ -26,7 +26,6 @@ const videoSlice = createSlice({
     extraReducers: builder => {
         builder
             .addCase(getVideoList.fulfilled, (state, action) => {
-                console.log(action.payload);
                 const {results} = action.payload;
                 state.loading=false;
                 state.videoList = results;

@@ -11,7 +11,7 @@ import {moviesActions} from "../../redux";
 
 const SearchingListPagination = () => {
     const dispatch = useDispatch();
-    const {searchedMovies, loading, totalPages, errors} = useSelector(state => state.search);
+    const {totalPages} = useSelector(state => state.search);
 
 
     const [query] = useSearchParams({page: '1'});
@@ -19,7 +19,6 @@ const SearchingListPagination = () => {
 
     const queryPageNumber = query.get('page');
     const queryName = query.get('name');
-    // const genreId = query.get('with_genres');
 
     useEffect((e) => {
         dispatch(moviesActions.getAll({page: queryPageNumber, name: queryName}))
@@ -51,16 +50,17 @@ const SearchingListPagination = () => {
                     '.css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root:hover':
                         {
                             backgroundColor: 'rgb(255,190,0)',
-
+                            color: 'black',
                         },
                     '.css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected':
                         {
                             backgroundColor: 'rgb(255,190,0)',
-
+                            color: 'black',
                         },
                     '.css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected:hover':
                         {
                             backgroundColor: 'rgb(255,190,0)',
+                            color: 'black',
 
                         }
                 }

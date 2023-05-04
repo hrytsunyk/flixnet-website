@@ -48,17 +48,16 @@ const SortedByGenrePagination = () => {
                     '.css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root:hover':
                         {
                             backgroundColor: 'rgb(255,190,0)',
-
+                            color: 'black',
                         },
                     '.css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected':
                         {
                             backgroundColor: 'rgb(255,190,0)',
-
+                            color:'black'
                         },
                     '.css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected:hover':
                         {
                             backgroundColor: 'rgb(255,190,0)',
-
                         }
                 }
             }

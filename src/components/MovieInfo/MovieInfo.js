@@ -46,7 +46,7 @@ const MovieInfo = () => {
 
 
 
-            {!loading2 &&
+            {movieById &&
                 <div className={css.MovieInfo}>
                     <img className={css.ImgMovieInfo} src={`${urls.base.getImg}/${movieById.poster_path}`} alt={`${movieById.title}`}/>
 

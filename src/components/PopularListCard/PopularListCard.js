@@ -11,7 +11,6 @@ const PopularListCard = ({movie}) => {
 
     const {id, poster_path, original_title, release_date, vote_count, vote_average, backdrop_path, genre_ids} = movie;
 
-    console.log(movie)
 
 
     return (

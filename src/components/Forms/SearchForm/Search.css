@@ -91,7 +91,8 @@ button:hover {
     background: rgba(197, 197, 197, 0.2);
     cursor: pointer;
 }
-/*input:hover{*/
-/*    width: 200px;*/
-/*    transition: 1000ms;*/
-/*}*/
+
+input:focus{
+    outline: rgba(255, 190, 0, 0.5) 0.5px solid;
+    transition: 200ms;
+}
