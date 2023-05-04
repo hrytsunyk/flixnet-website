@@ -5,6 +5,7 @@ const initialState = {
     movies: [],
     movieById: [],
     popular: [],
+    topRated:[],
     page: null,
     loading: null,
     loading2:null,
@@ -41,6 +42,19 @@ const getPopular = createAsyncThunk(
     async (_, thunkAPI) => {
         try {
             const {data} = await moviesService.getPopularList();
+            return data
+
+        } catch (e) {
+            thunkAPI.rejectWithValue(e.response.data)
+        }
+    }
+)
+
+const getTopRated = createAsyncThunk(
+    'moviesSlice/getTopRated',
+    async ({page}, thunkAPI) => {
+        try {
+            const {data} = await moviesService.getTopRatedList({page});
             return data
 
         } catch (e) {
@@ -86,6 +100,12 @@ const moviesSlice = createSlice({
                 const {results}=action.payload;
                 state.popular=results;
             })
+
+        .addCase(getTopRated.fulfilled, (state, action)=>{
+            const {results}= action.payload;
+            state.topRated=results;
+            })
+
     }
 })
 
@@ -94,7 +114,8 @@ const {reducer: moviesReducer} = moviesSlice;
 const moviesActions = {
     getAll,
     getById,
-    getPopular
+    getPopular,
+    getTopRated
 }
 
 export {

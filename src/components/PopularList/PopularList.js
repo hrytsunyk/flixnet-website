@@ -62,7 +62,7 @@ const PopularList = () => {
                     clickable: true,
                 }}
                 navigation={false}
-                modules={[Autoplay, Pagination]}
+                modules={[Autoplay]}
                 speed={3000}
                 className="mySwiper"
             >

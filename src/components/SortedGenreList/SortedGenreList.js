@@ -33,21 +33,6 @@ const SortedGenreList = () => {
 
     localStorage.setItem('name', nameQuery)
     const localStorageGenreTitle =  localStorage.getItem('name');
-    // localStorage.setItem('with_genres', genreId)
-
-    // const localStorageGenreId =  localStorage.getItem('with_genres');
-    //
-    // useEffect(() => {
-    //     dispatch(sortedGenresActions.sortedGenres({page:queryPageNumber, genreId}))
-    //     window.scroll(0,0)
-    // }, [dispatch, genreId,queryPageNumber,dispatch1])
-
-
-
-
-
-
-
 
     return (
         <div className={css.SortedGenreListFather}>

@@ -12,7 +12,9 @@ const moviesService = {
 
     getVideoById:(movieId)=> axiosService.get(urls.videos.videosById(movieId)),
 
-    getPopularList: ()=> axiosService.get(urls.movies.popularList)
+    getPopularList: ()=> axiosService.get(urls.movies.popularList),
+
+    getTopRatedList: (page = '1')=> axiosService.get(urls.movies.top, {params: page})
 };
 
 export {

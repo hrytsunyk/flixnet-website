@@ -86,6 +86,7 @@ button {
 }
 
 
+
 button:hover {
     background: rgba(197, 197, 197, 0.2);
     cursor: pointer;
@@ -94,9 +95,3 @@ button:hover {
 /*    width: 200px;*/
 /*    transition: 1000ms;*/
 /*}*/
-/*input:focus {*/
-/*    outline: #ffbe00 1px solid;*/
-/*    width: 150px;*/
-/*    transition: 500ms;*/
-/*}*/
-

@@ -17,17 +17,32 @@ const PopularListCard = ({movie}) => {
     return (
         <NavLink to={`/movie/${id}`}>
             <div className={css.reflectionImgFather}>
+
                 <div>
-                    <div className={css.RatingStars}>
+                    <div
+                        className={css.RatingStars}>
                         Total votes: {vote_count}
                         <RatingStars rating={vote_average}/>
                     </div>
-                    <div className={css.TopImgReflection}><img src={`${urls.base.getImg}${backdrop_path}`}
-                                                               alt={original_title}/></div>
-                    <div className={css.TitleMovie}><h5>{original_title.toUpperCase()}</h5></div>
+
+                    <div className={css.TopImgReflection}>
+                        <img
+                            src={`${urls.base.getImg}${backdrop_path}`}
+                            alt={original_title}
+                        />
+                    </div>
+
+                    <div className={css.TitleMovie}>
+                        <h5>{original_title.toUpperCase()}</h5>
+                    </div>
                 </div>
-                <div className={css.reflectionImg}><img src={`${urls.base.getImg}${backdrop_path}`}
-                                                        alt={original_title}/></div>
+
+                <div className={css.reflectionImg}>
+                    <img
+                        src={`${urls.base.getImg}${backdrop_path}`}
+                        alt={original_title}
+                    />
+                </div>
 
             </div>
         </NavLink>

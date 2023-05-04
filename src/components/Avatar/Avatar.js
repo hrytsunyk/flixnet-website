@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {useNavigate} from "react-router-dom";
+import {useNavigate, useParams, useSearchParams} from "react-router-dom";
 
 
 import Menu from '@mui/material/Menu';
@@ -12,19 +12,23 @@ const AvatarImage = () => {
     const navigate = useNavigate();
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
+
+    const [query] = useSearchParams();
+    const login = query.get('auth');
+    console.log(login)
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
     };
-    const handleClose = () => {
+    const handleClose = async () => {
         setAnchorEl(null);
-        navigate('/movies')
+      await  navigate('/login/auth')
     };
 
     return (
         <div>
-            <Stack direction="row" spacing={2}>
-                <Avatar  onClick={handleClick}  alt="Remy Sharp" src={`${urls.base.getAvatar}`}/>
-            </Stack>
+            {<Stack direction="row" spacing={2}>
+                <Avatar onClick={handleClick} alt="Remy Sharp" src={`${urls.base.getAvatar}`}/>
+            </Stack>}
 
             <Menu
                 id="fade-menu"
