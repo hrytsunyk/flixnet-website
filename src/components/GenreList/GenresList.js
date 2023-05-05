@@ -5,7 +5,6 @@ import {GenreBadge} from "../GenreBadge/GenreBadge";
 
 import css from './GenresList.module.css';
 import {Swiper, SwiperSlide} from "swiper/react";
-import {Mousewheel, Scrollbar} from "swiper";
 
 const GenresList = () => {
 
