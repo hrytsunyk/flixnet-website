@@ -3,9 +3,9 @@ import {useDispatch, useSelector} from "react-redux";
 import {moviesActions} from "../../redux";
 
 import css from './MoviesList.module.css';
-import {MoviesListPagination} from "../Pagination/MoviesListPagination";
 import {SpinnerIcon} from "../Icons/SpinnerIcon";
 import Poster from "../Poster/Poster";
+import {MoviesListPagination} from "../Pagination/MoviesListPagination";
 
 const MoviesList = () => {
     const dispatch = useDispatch();
