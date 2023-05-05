@@ -5,13 +5,13 @@ import {Logo} from "../Logo/Logo";
 import {SearchForm} from "../Forms/SearchForm/SearchForm";
 import {AvatarImage} from "../Avatar/Avatar";
 import {MyHamburgerMenu} from "../HamburgerMenu/HamburgerMenu";
-import {LeftSlidebar} from "../Slidebars/LeftSlidebar";
+import {TopNavigationSlidebar} from "../Slidebars/TopNavigationSlidebar";
 
 const Header = () => {
     return (
         <div className={css.HeaderFather}>
             <div className={css.HeaderLogoBurger}>
-                <LeftSlidebar/>
+                <TopNavigationSlidebar/>
                 <Logo/>
             </div>
             <SearchForm/>

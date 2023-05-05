@@ -33,7 +33,7 @@ export * from './SearchMoviesList/SearchMoviesList.module.css';
 export * from './SearchMoviesListCard/SearchMoviesListCard';
 export * from './SearchMoviesListCard/SearchMoviesListCard.module.css';
 export * from './Slidebars/OpenSlideBar.module.css';
-export * from './Slidebars/TopSlidebar';
+export * from './Slidebars/TopGenreListSlidebar';
 export * from './SortedGenreList/SortedGenreList';
 export * from './SortedGenreList/SortedGenreList.module.css';
 export * from './SortedGenreListCard/SortedGenreListCard';

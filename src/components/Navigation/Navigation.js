@@ -2,7 +2,7 @@ import React from 'react';
 import {NavLink} from "react-router-dom";
 
 import css from './Navigation.module.css';
-import {TopSlideBar} from "../Slidebars/TopSlidebar";
+import {TopGenreListSlidebar} from "../Slidebars/TopGenreListSlidebar";
 
 const Navigation = () => {
     return (
@@ -19,7 +19,6 @@ const Navigation = () => {
                 <div className={css.NavBarTVshows}>TV shows</div>
             </NavLink>
 
-            <TopSlideBar/>
 
             <NavLink to={'plans'}>
                 <div className={css.NavBarPlans}>Plans</div>

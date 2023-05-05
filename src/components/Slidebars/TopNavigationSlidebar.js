@@ -7,7 +7,7 @@ import {MyHamburgerMenu} from "../HamburgerMenu/HamburgerMenu";
 import {Navigation} from "../Navigation/Navigation";
 import {AvatarImage} from "../Avatar/Avatar";
 
-const LeftSlidebar = () => {
+const TopNavigationSlidebar = () => {
     const [state, setState] = useState({
         top: false,
     });
@@ -44,6 +44,29 @@ const LeftSlidebar = () => {
         </Box>
     );
 
+    // const list2 = (anchor) => (
+    //     <Box
+    //         sx={
+    //             {
+    //                 // height:'100%',
+    //                 width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250,
+    //                 display: 'flex',
+    //                 flexDirection:"column",
+    //                 justifyContent: 'center',
+    //                 alignItems:'center',
+    //                 background: '#12121f',
+    //                 position: 'sticky',
+    //                 top: '50px',
+    //             }
+    //         }
+    //         onClick={toggleDrawer(anchor, true)}
+    //         onKeyDown={toggleDrawer(anchor, false)}
+    //     >
+    //
+    //         <GenresList/>
+    //     </Box>
+    // );
+
     return (
         <div className={css.OpenSlideBar}>
             {['top'].map((anchor) => (
@@ -52,7 +75,7 @@ const LeftSlidebar = () => {
                     <Drawer
                         anchor={anchor}
                         open={state[anchor]}
-                        onClose={toggleDrawer(anchor, false)}
+                        onClose={toggleDrawer(anchor, true)}
                     >
                         {list(anchor)}
                     </Drawer>
@@ -63,5 +86,5 @@ const LeftSlidebar = () => {
 };
 
 export {
-    LeftSlidebar
+    TopNavigationSlidebar
 }

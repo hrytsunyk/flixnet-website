@@ -8,11 +8,10 @@ const MyHamburgerMenu = () => {
 
 
     const handleClick = () => {
-        setIsOpen(prevState => prevState)
+        setIsOpen(prevState => !prevState)
     }
 
 
-    const cachedFn = useCallback(handleClick, [isOpen])
 
 
     return (

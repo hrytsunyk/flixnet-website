@@ -25,8 +25,8 @@ const MoviesList = () => {
     return (
         <div className={css.MoviesList}>
             {loading && <div className={css.Spinner}><SpinnerIcon/></div>}
-            {
-                movies &&
+
+            {movies &&
                 <div className={css.MoviesListMap}>
                     {movies.map(
                         movie =>

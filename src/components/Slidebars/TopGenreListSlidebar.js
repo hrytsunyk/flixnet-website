@@ -4,16 +4,12 @@ import {GenresList} from "../GenreList/GenresList";
 
 import css from './OpenSlideBar.module.css';
 
-const TopSlideBar = () => {
+const TopGenreListSlidebar = () => {
     const [state, setState] = useState({
         top: false,
     });
 
     const toggleDrawer = (anchor, open) => (event) => {
-        if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
-            return;
-        }
-
         setState({...state, [anchor]: open});
     };
 
@@ -21,10 +17,15 @@ const TopSlideBar = () => {
         <Box
             sx={
                 {
+                    height:'100%',
                     width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250,
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems:'center',
+                    flexWrap: 'wrap',
                     background: '#12121f',
-                    position: 'sticky',
-                    top: '50px',
+                    // position: 'sticky',
+                    // top: '50px',
                 }
             }
             onClick={toggleDrawer(anchor, false)}
@@ -36,17 +37,17 @@ const TopSlideBar = () => {
     );
 
     return (
-        <div className={css.OpenSlideBar}>
-            {['left'].map((anchor) => (
+        <div >
+            {['top'].map((anchor) => (
                 <React.Fragment key={anchor}>
-                    <div onClick={toggleDrawer(anchor, true)}>
+                    <div className={css.OpenSlideBar} onClick={toggleDrawer(anchor, true)}>
                         Genres
                         <div className={css.triangle}/>
                     </div>
                     <Drawer
                         anchor={anchor}
                         open={state[anchor]}
-                        onClose={toggleDrawer(anchor, false)}
+                        onClose={toggleDrawer(anchor, false )}
                     >
                         {list(anchor)}
                     </Drawer>
@@ -57,5 +58,5 @@ const TopSlideBar = () => {
 };
 
 export {
-    TopSlideBar
+    TopGenreListSlidebar
 }
