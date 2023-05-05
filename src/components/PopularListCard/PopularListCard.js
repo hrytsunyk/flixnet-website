@@ -9,7 +9,7 @@ import {RatingStars} from "../Rating/RatingStars";
 
 const PopularListCard = ({movie}) => {
 
-    const {id, poster_path, original_title, release_date, vote_count, vote_average, backdrop_path, genre_ids} = movie;
+    const {id, original_title, vote_count, vote_average, backdrop_path} = movie;
 
 
 

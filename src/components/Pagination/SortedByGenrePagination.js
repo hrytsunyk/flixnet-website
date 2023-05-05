@@ -6,14 +6,14 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import {useDispatch, useSelector} from "react-redux";
 import {Link, useSearchParams} from "react-router-dom";
 import {useEffect} from "react";
-import {moviesActions, sortedGenresActions} from "../../redux";
+import {sortedGenresActions} from "../../redux";
 
 
 const SortedByGenrePagination = () => {
     const dispatch1 = useDispatch();
 
     const [query] = useSearchParams({page: '1'});
-    const {page, totalPages} = useSelector(state => state.search);
+    const {totalPages} = useSelector(state => state.search);
 
 
     const genreId = query.get('with_genres');
@@ -27,7 +27,7 @@ const SortedByGenrePagination = () => {
             left: 0,
             behavior: 'smooth'
         })
-    }, [dispatch1, genreId, queryPageNumber, dispatch1])
+    }, [genreId, queryPageNumber, dispatch1])
 
 
     return (

@@ -3,7 +3,7 @@ import Poster from "../Poster/Poster";
 
 const TopRatedListCard = ({topMovie}) => {
 
-    const {id, original_title, vote_average, vote_count, poster_path, release_date, genre_ids, genreId} = topMovie;
+    const {id, original_title, vote_average, vote_count, poster_path, release_date} = topMovie;
 
 
     return (

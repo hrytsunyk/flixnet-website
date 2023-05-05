@@ -6,7 +6,6 @@ import {useNavigate, useSearchParams} from "react-router-dom";
 import {searchActions} from "../../../redux";
 import {useDispatch} from "react-redux";
 
-import css from './Search.css';
 
 
 const SearchForm = () => {
@@ -25,7 +24,7 @@ const SearchForm = () => {
 
     useEffect(() => {
         dispatch(searchActions.getSearch({page: queryPageNumber, name: queryName}))
-    }, [dispatch, query, queryPageNumber])
+    }, [dispatch, query, queryPageNumber, queryName])
 
     const findMovie = async (dataInput) => {
         const {name} = dataInput;

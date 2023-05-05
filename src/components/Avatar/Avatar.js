@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {useNavigate, useParams, useSearchParams} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
 
 import Menu from '@mui/material/Menu';
@@ -13,8 +13,6 @@ const AvatarImage = () => {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
 
-    const [query] = useSearchParams();
-    const login = query.get('auth');
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
     };

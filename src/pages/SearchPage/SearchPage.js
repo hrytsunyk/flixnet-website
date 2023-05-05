@@ -1,6 +1,5 @@
 import React from 'react';
-import {SearchMoviesList} from "../../components/SearchMoviesList/SearchMoviesList";
-import Pagination from "@mui/material/Pagination";
+import {SearchMoviesList} from "../../components";
 
 const SearchPage = () => {
     return (

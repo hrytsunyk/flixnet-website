@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import {videoActions} from "../../redux/slices/videoSlice";
-import {useParams, useSearchParams} from "react-router-dom";
+import {useParams} from "react-router-dom";
 import {VideoListCard} from "../VideoListCard/VideoListCard";
 
 const VideoList = () => {

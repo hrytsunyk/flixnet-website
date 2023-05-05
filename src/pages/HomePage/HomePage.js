@@ -3,7 +3,6 @@ import React from 'react';
 import css from './HomePage.module.css';
 import {PopularList} from "../../components/PopularList/PopularList";
 import {TopRatedList} from "../../components/TopRatedList/TopRatedList";
-import {GenresList} from "../../components";
 
 const HomePage = () => {
     return (

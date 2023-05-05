@@ -4,7 +4,6 @@ import css from './Header.module.css';
 import {Logo} from "../Logo/Logo";
 import {SearchForm} from "../Forms/SearchForm/SearchForm";
 import {AvatarImage} from "../Avatar/Avatar";
-import {MyHamburgerMenu} from "../HamburgerMenu/HamburgerMenu";
 import {TopNavigationSlidebar} from "../Slidebars/TopNavigationSlidebar";
 
 const Header = () => {

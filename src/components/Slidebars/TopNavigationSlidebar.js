@@ -1,11 +1,9 @@
-import React, {useCallback, useState} from 'react';
-import {Avatar, Box, Drawer} from "@mui/material";
-import {GenresList} from "../GenreList/GenresList";
+import React, {useState} from 'react';
+import {Box, Drawer} from "@mui/material";
 
 import css from './OpenSlideBar.module.css';
 import {MyHamburgerMenu} from "../HamburgerMenu/HamburgerMenu";
 import {Navigation} from "../Navigation/Navigation";
-import {AvatarImage} from "../Avatar/Avatar";
 
 const TopNavigationSlidebar = () => {
     const [state, setState] = useState({

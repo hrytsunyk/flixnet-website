@@ -4,13 +4,12 @@ import {RatingStars} from "../Rating/RatingStars";
 import css from './Poster.module.css';
 import {NavLink} from "react-router-dom";
 import {useSelector} from "react-redux";
-import {GenreBadge} from "../GenreBadge/GenreBadge";
-import {GenresList} from "../GenreList/GenresList";
+
 import {SpinnerIcon} from "../Icons/SpinnerIcon";
 
 const Poster = ({id, original_title, vote_average, vote_count, poster_path, release_date,genre_ids, genreId}) => {
 
-    const {movieById,loading2} = useSelector(state => state.movies);
+    const {loading2} = useSelector(state => state.movies);
 
     const sliceDate = release_date ? release_date.slice(0, 4) : '2022';
 

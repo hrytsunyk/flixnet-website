@@ -6,7 +6,6 @@ import {
     HomePage, MovieInfoPage, MoviesPage,
     NotFoundPage, SearchPage, SortedGenresPage, TvShowsPage
 } from "./pages";
-import {Home} from "@mui/icons-material";
 import {LoginPage} from "./pages/LoginPage/LoginPage";
 
 const App = () => {

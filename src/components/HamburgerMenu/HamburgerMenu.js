@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, useMemo, useState} from 'react';
+import React, {useState} from 'react';
 import HamburgerMenu from 'react-hamburger-menu'
 
 import css from './HamburgerMenu.module.css';

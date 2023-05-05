@@ -1,22 +1,14 @@
-import React, {useEffect} from 'react';
-import {useDispatch, useSelector} from "react-redux";
+import React from 'react';
+import {useSelector} from "react-redux";
 
 import {SearchMoviesListCard} from "../SearchMoviesListCard/SearchMoviesListCard";
 
 import css from './SearchMoviesList.module.css';
 import {SpinnerIcon} from "../Icons/SpinnerIcon";
-import PaginationItem from "@mui/material/PaginationItem";
-import {Link, useSearchParams} from "react-router-dom";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import Pagination from "@mui/material/Pagination";
-import {moviesActions} from "../../redux/slices/moviesSlice";
-import {MoviesPage} from "../../pages";
-import {MoviesListPagination} from "../Pagination/MoviesListPagination";
 import {SearchingListPagination} from "../Pagination/SearchingListPagination";
 
 const SearchMoviesList = () => {
-    const {searchedMovies, loading, totalPages, errors} = useSelector(state => state.search);
+    const {searchedMovies, loading} = useSelector(state => state.search);
 
 
 

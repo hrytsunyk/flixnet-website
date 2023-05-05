@@ -1,12 +1,11 @@
 import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from "react-redux";
-import {moviesActions} from "../../redux/slices/moviesSlice";
+import {moviesActions} from "../../redux";
 import {useParams} from "react-router-dom";
-import {urls} from "../../configs/urls";
+import {urls} from "../../configs";
 
 import css from './MovieInfo.module.css';
 import {GenreBadge} from "../GenreBadge/GenreBadge";
-import {Rating} from "@mui/material";
 import {RatingStars} from "../Rating/RatingStars";
 import {SpinnerIcon} from "../Icons/SpinnerIcon";
 

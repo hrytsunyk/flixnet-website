@@ -1,8 +1,7 @@
 import React from 'react';
-import {MoviesList} from "../../components/MoviesList/MoviesList";
+import {MoviesList} from "../../components";
 
 import css from './MoviesPage.module.css';
-import {GenresList} from "../../components/GenreList/GenresList";
 
 const MoviesPage = () => {
 

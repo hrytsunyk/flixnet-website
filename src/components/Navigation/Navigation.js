@@ -2,7 +2,6 @@ import React from 'react';
 import {NavLink} from "react-router-dom";
 
 import css from './Navigation.module.css';
-import {TopGenreListSlidebar} from "../Slidebars/TopGenreListSlidebar";
 
 const Navigation = () => {
     return (

@@ -28,7 +28,7 @@ const SearchingListPagination = () => {
             behavior: 'smooth'
         })
 
-    }, [dispatch, query]);
+    }, [queryName, queryPageNumber, dispatch, query]);
 
 
     return (
@@ -39,13 +39,13 @@ const SearchingListPagination = () => {
                     '.css-1v2lvtn-MuiPaginationItem-root':
                         {
                             color: 'white',
-                            fontWeight:'900'
+                            fontWeight: '900'
                         },
                     '.css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root':
                         {
                             backgroundColor: 'rgba(255,255,255,0.1)',
                             color: 'white',
-                            fontWeight:'900'
+                            fontWeight: '900'
                         },
                     '.css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root:hover':
                         {
