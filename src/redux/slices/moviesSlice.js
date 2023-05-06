@@ -5,10 +5,11 @@ const initialState = {
     movies: [],
     movieById: [],
     popular: [],
-    topRated:[],
+    topRated: [],
+    upcomingList:[],
     page: null,
     loading: null,
-    loading2:null,
+    loading2: null,
     error: null
 };
 
@@ -62,7 +63,18 @@ const getTopRated = createAsyncThunk(
         }
     }
 )
+const getUpcoming = createAsyncThunk(
+    'moviesSlice/getUpcoming',
+    async (_, thunkAPI) => {
+        try {
+            const {data} = await moviesService.getUpcomingList();
+            return data
 
+        } catch (e) {
+            thunkAPI.rejectWithValue(e.response.data)
+        }
+    }
+)
 
 
 const moviesSlice = createSlice({
@@ -96,14 +108,19 @@ const moviesSlice = createSlice({
                 state.loading2 = true;
             })
 
-            .addCase(getPopular.fulfilled, (state, action)=>{
-                const {results}=action.payload;
-                state.popular=results;
+            .addCase(getPopular.fulfilled, (state, action) => {
+                const {results} = action.payload;
+                state.popular = results;
             })
 
-        .addCase(getTopRated.fulfilled, (state, action)=>{
-            const {results}= action.payload;
-            state.topRated=results;
+            .addCase(getTopRated.fulfilled, (state, action) => {
+                const {results} = action.payload;
+                state.topRated = results;
+            })
+
+            .addCase(getUpcoming.fulfilled, (state, action) => {
+                const {results} = action.payload;
+                state.upcomingList = results;
             })
 
     }
@@ -115,7 +132,8 @@ const moviesActions = {
     getAll,
     getById,
     getPopular,
-    getTopRated
+    getTopRated,
+    getUpcoming
 }
 
 export {
