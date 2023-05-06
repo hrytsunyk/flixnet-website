@@ -4,24 +4,27 @@ import css from './Footer.module.css';
 import {SocialMediasIcons} from "../Icons/SocialMediaIcons/SocialMediasIcons";
 import {Logo} from "../Logo/Logo";
 import {Navigation} from "../Navigation/Navigation";
+import {GenresList} from "../GenreList/GenresList";
 
 const Footer = () => {
     return (
         <div className={css.FooterFather}>
             {/*<div className={css.HrLine}/>*/}
-
-                <div className={css.FooterLogo}>
-                    <Logo/>
+            <GenresList/>
 
 
-                    <Navigation/>
+            <div className={css.FooterLogo}>
+                <Logo/>
 
-                    <SocialMediasIcons/>
-                </div>
+
+                <Navigation/>
+
+                <SocialMediasIcons/>
+            </div>
         </div>
     );
 }
 
 export {
-   Footer
+    Footer
 }

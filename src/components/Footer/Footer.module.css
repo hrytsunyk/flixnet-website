@@ -4,8 +4,9 @@
     background: rgb(0, 0, 0, 0.4);
     backdrop-filter: blur(5px);
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: flex-start;
+    align-items: self-end;
+    flex-direction: column;
 
 }
 
@@ -43,4 +44,9 @@
     background: #ffbe00;
     position: fixed;
     bottom:300px;
+}
+
+.FooterFather .swiper {
+    height: 100%;
+    margin: 100px 0 0 0;
 }

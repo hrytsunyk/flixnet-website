@@ -4,9 +4,8 @@ import {UpcomingListCard} from "../UpcomingListCard/UpcomingListCard";
 
 import {moviesActions} from "../../redux";
 
-import css from './UpcomingList.css';
+import   './UpcomingList.css';
 import {Swiper, SwiperSlide} from "swiper/react";
-import {GenreBadge} from "../GenreBadge/GenreBadge";
 
 const UpcomingList = () => {
 
