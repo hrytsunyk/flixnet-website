@@ -35,6 +35,10 @@ const GenresList = () => {
                         slidesPerView: 2,
                         spaceBetween: 10
                     },
+                    768: {
+                        slidesPerView: 5,
+                        spaceBetween: 20,
+                    },
                     890: {
                         slidesPerView: 3,
                         spaceBetween: 30,

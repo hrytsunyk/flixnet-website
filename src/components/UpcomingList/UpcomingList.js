@@ -34,7 +34,12 @@ const UpcomingList = () => {
                     },
                     375: {
                         slidesPerView: 2,
-                        spaceBetween: 30
+                        spaceBetween: 20
+                    },
+
+                    768: {
+                        slidesPerView: 4,
+                        spaceBetween: 20,
                     },
                     670: {
                         slidesPerView: 2,
