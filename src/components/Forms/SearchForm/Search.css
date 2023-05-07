@@ -1,5 +1,5 @@
 @media screen and (max-width: 375px) {
-    form {
+     form {
         width: 100px;
         height: 30px;
         display: flex;
