@@ -3,8 +3,9 @@ import {useDispatch, useSelector} from "react-redux";
 import {genreActions} from "../../redux";
 import {GenreBadge} from "../GenreBadge/GenreBadge";
 
-import css from './GenresList.module.css';
+// import css from './GenresList.css';
 import {Swiper, SwiperSlide} from "swiper/react";
+import '././GenresList.css';
 
 const GenresList = () => {
 
@@ -17,7 +18,7 @@ const GenresList = () => {
     }, [dispatch])
 
     return (
-        <div className={css.GenresList}>
+        <div className={'GenresList'}>
             {/*{genresList.map(genre => <GenreBadge key={genre.id} genre={genre} id={genre.id}/>)}*/}
             <Swiper
                 centeredSlides={false}
@@ -25,6 +26,10 @@ const GenresList = () => {
                     0: {
                         slidesPerView: 1,
                         spaceBetween: 30
+                    },
+                    375: {
+                        slidesPerView: 3,
+                        spaceBetween: 20
                     },
                     670: {
                         slidesPerView: 2,

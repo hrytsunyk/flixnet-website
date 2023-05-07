@@ -1,8 +1,60 @@
+@media screen and (max-width: 375px){
+    .UpcomingFather{
+        /*display: flex;*/
+        width: 100vw;
+        height: 300px;
+        /*justify-content: center;*/
+    }
+
+
+    .UpcomingFather img{
+        width: 130px;
+        height: 180px;
+    }
+
+    .UpcomingFather .swiper {
+        width: 100vw;
+        height: 300px;
+        margin: 0 0 0 10px;
+    }
+
+
+    .UpcomingFather .Poster_Title__-HHYh{
+        width: 130px;
+        height: 60px;
+        font-size: 12px;
+        /*padding: 20px;*/
+        /*box-sizing: border-box;*/
+        margin: 0;
+
+    }
+    .UpcomingFather .Poster_TitleCard__77653{
+        width: 130px;
+        margin: 0;
+        height: 180px;
+        /*padding: 0;*/
+    }
+
+    .UpcomingFather .Poster_RatingYear__b8R8A{
+        width: 130px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-size: 12px;
+        padding: 20px;
+        box-sizing: border-box;
+        margin: 0;
+    }
+
+
+}
 .UpcomingFather{
-    display: flex;
-    /*width: 100vw;*/
+    /*display: flex;*/
+    width: 100vw;
     height: 300px;
-    justify-content: center;
+    /*justify-content: center;*/
 }
 
 
@@ -12,8 +64,8 @@
 }
 
 .UpcomingFather .swiper {
-    width: 100%;
-    height: 350px;
+    width: 100vw;
+    height: 300px;
 }
 
 
@@ -21,8 +73,8 @@
     width: 130px;
     height: 60px;
     font-size: 12px;
-    padding: 20px;
-    box-sizing: border-box;
+    /*padding: 20px;*/
+    /*box-sizing: border-box;*/
     margin: 0;
 
 }
@@ -30,6 +82,7 @@
     width: 130px;
     margin: 0;
     height: 180px;
+    /*padding: 0;*/
 }
 
 .UpcomingFather .Poster_RatingYear__b8R8A{

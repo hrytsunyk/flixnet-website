@@ -1,0 +1,19 @@
+.GenresList{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 70px 0 20px 0;
+    z-index: +1;
+
+}
+
+.GenresList .swiper {
+    width: 100%;
+    height: 50px;
+    display: block;
+    margin: auto;
+    padding: 20px;
+    box-sizing: border-box;
+}

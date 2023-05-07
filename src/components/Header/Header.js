@@ -5,7 +5,6 @@ import {Logo} from "../Logo/Logo";
 import {SearchForm} from "../Forms/SearchForm/SearchForm";
 import {AvatarImage} from "../Avatar/Avatar";
 import {TopNavigationSlidebar} from "../Slidebars/TopNavigationSlidebar";
-import {GenresList} from "../GenreList/GenresList";
 
 const Header = () => {
     return (
@@ -22,9 +21,6 @@ const Header = () => {
                     <AvatarImage/>
                 </div>
             </div>
-            
-            <GenresList/>
-
             {/*<div className={css.HrLine}/>*/}
 
 

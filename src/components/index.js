@@ -6,7 +6,7 @@ export * from './Forms/SearchForm/SearchForm';
 export * from './Forms/SearchForm/Search.css';
 export * from './GenreBadge/GenreBadge';
 export * from './GenreBadge/GenreBadge.module.css';
-export * from './GenreList/GenresList.module.css';
+export * from './GenreList/./GenresList.css';
 export * from './GenreList/GenresList';
 export * from './Header/Header';
 export * from './Header/Header.module.css';

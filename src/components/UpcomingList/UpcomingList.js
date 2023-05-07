@@ -21,7 +21,6 @@ const UpcomingList = () => {
         })
     },[dispatch])
 
-    console.log(upcomingList)
 
     return (
         <div className={'UpcomingFather'}>
@@ -31,6 +30,10 @@ const UpcomingList = () => {
                 breakpoints={{
                     0: {
                         slidesPerView: 1,
+                        spaceBetween: 30
+                    },
+                    375: {
+                        slidesPerView: 2,
                         spaceBetween: 30
                     },
                     670: {
