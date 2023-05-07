@@ -13,6 +13,7 @@
         height: 20px;
         border-style: none;
         border-radius: 45px;
+        border-collapse: collapse;
         /*position: relative;*/
         /*top: 0;*/
         /*left: 23px;*/
@@ -86,6 +87,7 @@ input {
     height: 35px;
     border-style: none;
     border-radius: 45px;
+    border-collapse: collapse;
     position: relative;
     top: 0;
     left: 23px;
