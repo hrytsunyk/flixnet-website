@@ -32,31 +32,27 @@ const UpcomingListPagination = () => {
         <Pagination
             sx={
                 {
-                    '.css-1v2lvtn-MuiPaginationItem-root':
+                    '.MuiPaginationItem-root':
                         {
                             color: 'white',
                             fontWeight:'900'
                         },
-                    '.css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root':
+                    '.MuiButtonBase-root.MuiPaginationItem-root':
                         {
                             backgroundColor: 'rgba(255,255,255,0.1)',
                             color: 'white',
                             fontWeight:'900'
                         },
-                    '.css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root:hover':
+                    '.MuiButtonBase-root.MuiPaginationItem-root:hover':
                         {
                             backgroundColor: 'rgb(255,190,0)',
                             color: 'black',
                         },
-                    '.css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected':
+                    '.MuiButtonBase-root.MuiPaginationItem-root.Mui-selected':
                         {
                             backgroundColor: 'rgb(255,190,0)',
                             color:'black',
                         },
-                    '.css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected:hover':
-                        {
-                            backgroundColor: 'rgb(255,190,0)',
-                        }
                 }
             }
             count={500}
