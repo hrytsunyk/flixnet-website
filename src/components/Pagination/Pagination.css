@@ -1,0 +1,18 @@
+.MuiPaginationItem-root {
+    color: white;
+}
+
+.MuiButtonBase-root.MuiPaginationItem-root{
+    background-color: rgba(255,255,255,0.1);
+    color: white;
+}
+
+.MuiButtonBase-root.MuiPaginationItem-root:hover{
+    background-color: rgb(255,190,0);
+    color: black;
+}
+
+.MuiButtonBase-root.MuiPaginationItem-root.Mui-selected{
+    background-color: rgb(255,190,0);
+    color: black;
+}

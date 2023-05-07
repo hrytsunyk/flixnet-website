@@ -7,6 +7,8 @@ import {useDispatch} from "react-redux";
 import {Link, useSearchParams} from "react-router-dom";
 import {useEffect} from "react";
 import {moviesActions} from "../../redux";
+import './Pagination.css';
+
 
 
 const TopRatedListPagination = () => {
@@ -30,31 +32,31 @@ const TopRatedListPagination = () => {
     return (
 
         <Pagination
-            sx={
-                {
-                    '.MuiPaginationItem-root':
-                        {
-                            color: 'white',
-                            fontWeight:'900'
-                        },
-                    '.MuiButtonBase-root.MuiPaginationItem-root':
-                        {
-                            backgroundColor: 'rgba(255,255,255,0.1)',
-                            color: 'white',
-                            fontWeight:'900'
-                        },
-                    '.MuiButtonBase-root.MuiPaginationItem-root:hover':
-                        {
-                            backgroundColor: 'rgb(255,190,0)',
-                            color: 'black',
-                        },
-                    '.MuiButtonBase-root.MuiPaginationItem-root.Mui-selected':
-                        {
-                            backgroundColor: 'rgb(255,190,0)',
-                            color:'black',
-                        },
-                }
-            }
+            // sx={
+            //     {
+            //         '.MuiPaginationItem-root':
+            //             {
+            //                 color: 'white',
+            //                 fontWeight:'900'
+            //             },
+            //         '.MuiButtonBase-root.MuiPaginationItem-root':
+            //             {
+            //                 backgroundColor: 'rgba(255,255,255,0.1)',
+            //                 color: 'white',
+            //                 fontWeight:'900'
+            //             },
+            //         '.MuiButtonBase-root.MuiPaginationItem-root:hover':
+            //             {
+            //                 backgroundColor: 'rgb(255,190,0)',
+            //                 color: 'black',
+            //             },
+            //         '.MuiButtonBase-root.MuiPaginationItem-root.Mui-selected':
+            //             {
+            //                 backgroundColor: 'rgb(255,190,0)',
+            //                 color:'black',
+            //             },
+            //     }
+            // }
             count={500}
             page={+queryPageNumber}
             renderItem={(item) => (
