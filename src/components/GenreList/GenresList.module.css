@@ -3,8 +3,8 @@
     height: 60px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin: 70px 0 0 0;
+    align-items: flex-start;
+    /*margin: 70px 0 0 0;*/
     z-index: +1;
 
 }
