@@ -13,6 +13,7 @@
     overflow: hidden;
     padding: 10px;
     box-sizing: border-box;
+    margin: 5px;
 }
 
 .GenreBadge:hover::before {

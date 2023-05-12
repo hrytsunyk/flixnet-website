@@ -7,6 +7,10 @@ const MoviesPage = () => {
 
     return (
         <div className={css.MoviesPage}>
+            <div className={css.titleMoviesPage}>
+                <h2>ALL MOVIES:</h2>
+                <h2 className={css.reflectionH2}>ALL MOVIES:</h2>
+            </div>
             <MoviesList/>
 
         </div>
