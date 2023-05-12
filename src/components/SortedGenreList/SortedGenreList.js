@@ -15,7 +15,7 @@ const SortedGenreList = () => {
 
 
     localStorage.setItem('name', nameQuery)
-    const localStorageGenreTitle =  localStorage.getItem('name');
+    const localStorageGenreTitle = localStorage.getItem('name').toUpperCase();
 
     return (
         <div className={css.SortedGenreListFather}>
@@ -23,12 +23,8 @@ const SortedGenreList = () => {
             {loading && <div className={css.Spinner}><SpinnerIcon/></div>}
 
             <div className={css.GenreName}>
-                <h2>
-                    {localStorageGenreTitle.toUpperCase()}:
-                </h2>
-                <h2 className={css.reflectionH2}>
-                    {localStorageGenreTitle.toUpperCase()}:
-                </h2>
+                <h2>{localStorageGenreTitle}:</h2>
+                <h2 className={css.reflectionH2}>{localStorageGenreTitle}:</h2>
             </div>
 
             <div className={css.SortedGenreList}>{sortedByGenre &&

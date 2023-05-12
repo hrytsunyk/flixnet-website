@@ -54,8 +54,8 @@ const UpcomingList = () => {
                         spaceBetween: 30
                     },
                     1021: {
-                        slidesPerView: 10,
-                        spaceBetween: 22
+                        slidesPerView: 8,
+                        spaceBetween: 30
                     },
 
                 }}

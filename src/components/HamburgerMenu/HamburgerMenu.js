@@ -8,7 +8,7 @@ const MyHamburgerMenu = () => {
 
 
     const handleClick = () => {
-        setIsOpen(prevState => !prevState)
+        setIsOpen(prevState => prevState)
     }
 
 

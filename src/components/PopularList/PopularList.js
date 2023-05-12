@@ -25,7 +25,6 @@ const PopularList = () => {
 
     return (
         <div className={'swiper-Father'}>
-            <div className={'top-title'}><h3>Popular movies:</h3></div>
 
             <Swiper
                 centeredSlides={false}

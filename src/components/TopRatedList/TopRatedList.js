@@ -11,9 +11,9 @@ const TopRatedList = () => {
 
     return (
         <div className={css.TopRatedListFather}>
-            <div className={css.hrLine}></div>
+            {/*<div className={css.hrLine}></div>*/}
 
-            <div className={css.topRated}><h3>Top rated:</h3></div>
+            {/*<div className={css.topRated}><h3>Top rated:</h3></div>*/}
             {topRated.map(topMovie => <TopRatedListCard key={topMovie.id} topMovie={topMovie}/>)}
 
             <div className={css.TopRatedListPagination}>
