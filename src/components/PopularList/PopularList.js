@@ -29,24 +29,18 @@ const PopularList = () => {
             <Swiper
                 centeredSlides={false}
                 breakpoints={{
-                    0: {
-                        slidesPerView: 1,
-                        spaceBetween: 30
-                    },
-                    // 670: {
-                    //     slidesPerView: 2,
-                    //     spaceBetween: 10
-                    // },
-                    768: {
+                    0:{
                         slidesPerView: 2,
-                        spaceBetween: 20,
+                        spaceBetween: 30,
                     },
-                    // 1020: {
-                    //     slidesPerView: 2,
-                    //     spaceBetween: 30
-                    // },
-                    1021: {
-                        slidesPerView: 4,
+
+                    1000: {
+                        slidesPerView: 2,
+                        spaceBetween: 30,
+                    },
+
+                    1189: {
+                        slidesPerView: 3,
                         spaceBetween: 30
                     },
 

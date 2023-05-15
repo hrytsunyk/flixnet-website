@@ -5,6 +5,7 @@
 .MuiButtonBase-root.MuiPaginationItem-root{
     background-color: rgba(255,255,255,0.1);
     color: white;
+    font-weight: bolder;
 }
 
 .MuiButtonBase-root.MuiPaginationItem-root:hover{
@@ -15,4 +16,14 @@
 .MuiButtonBase-root.MuiPaginationItem-root.Mui-selected{
     background-color: rgb(255,190,0);
     color: black;
+}
+
+.css-1v2lvtn-MuiPaginationItem-root{
+    color: white;
+}
+
+.MuiPaginationItem-root.MuiPaginationItem-ellipsis{
+    color: white;
+    font-weight: bolder;
+    margin: 0;
 }

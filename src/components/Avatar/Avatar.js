@@ -18,15 +18,18 @@ const AvatarImage = () => {
     };
     const handleClose = async () => {
         setAnchorEl(null);
-      await  navigate('/login/auth')
+        await navigate('/login/auth')
     };
 
     return (
         <div>
             {<Stack direction="row" spacing={2}>
-                <Avatar onClick={handleClick} alt="Remy Sharp" src={`${urls.base.getAvatar}`}/>
-            </Stack>}
-
+                <Avatar
+                    onClick={handleClick}
+                    alt="Remy Sharp"
+                    src={`${urls.base.getAvatar}`}/>
+            </Stack>
+            }
             <Menu
                 id="fade-menu"
                 MenuListProps={{

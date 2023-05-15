@@ -40,16 +40,13 @@ const GenresList = () => {
                         spaceBetween: 20,
                     },
                     890: {
-                        slidesPerView: 3,
+                        slidesPerView: 8,
                         spaceBetween: 30,
                     },
-                    1020: {
-                        slidesPerView: 2,
-                        spaceBetween: 30
-                    },
-                    1021: {
-                        slidesPerView: 11,
-                        spaceBetween: 5
+
+                    1189: {
+                        slidesPerView: 10,
+                        spaceBetween: 20
                     },
 
                 }}

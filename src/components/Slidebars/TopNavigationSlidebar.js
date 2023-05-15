@@ -73,7 +73,7 @@ const TopNavigationSlidebar = () => {
                     <Drawer
                         anchor={anchor}
                         open={state[anchor]}
-                        onClose={toggleDrawer(anchor, true)}
+                        onClose={toggleDrawer(anchor, false)}
                     >
                         {list(anchor)}
                     </Drawer>

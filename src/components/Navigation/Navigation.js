@@ -11,7 +11,7 @@ const Navigation = () => {
             </NavLink>
 
             <NavLink to={'movies'}>
-                <div className={css.NavBarMovies}>Movies</div>
+                <div className={css.NavBarMovies}>All movies</div>
             </NavLink>
 
             <NavLink to={'tv_shows'}>
